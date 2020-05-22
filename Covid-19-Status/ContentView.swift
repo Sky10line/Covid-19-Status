@@ -6,6 +6,9 @@
 //  Copyright © 2020 Rodrigo-Rogerio. All rights reserved.
 //
 
+//https://www.youtube.com/watch?v=IIDiqgdn2yo
+//video tutorial de SwiftUI
+
 import SwiftUI
 
 struct ContentView: View {
