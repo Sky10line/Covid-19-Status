@@ -13,32 +13,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        Text(catchdata())
+        let sp = catchdata()
+        return VStack {
+            Text("Estado: " + sp!.state)
+            Text("Casos: " + String(sp!.cases))
+            Text("Mortes: " + String(sp!.deaths))
+            Text("Suspeitas: " + String(sp!.suspects))
+            Text("Recuperadas: " + String(sp!.refuses))
+            
+        }
+       
     }
 }
 
-func catchdata() -> String{
-    var sp: String = "nada"
-    if let url = URL(string: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp"){
+func catchdata() -> Response? {
+    var res: Response!
+    let group = DispatchGroup()
+    group.enter()
+    if let url = URL(string: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp" ){
         print("1")
+
         URLSession.shared.dataTask(with: url){
             data, response, error in
             print("2")
             if let data = data{
                 print("3")
                 do{
-                    let res = try JSONDecoder().decode(Response.self, from: data)
-                    print("4")
+                   let teste = try JSONDecoder().decode(Response.self, from: data)
+                    print(teste.state)
+                    res = teste
                 } catch let erro{
                     print(erro)
                 }
             }
+            group.leave()
         }.resume()
     }
-
+    group.wait()
     print("5")
-    return sp
+    return res
 }
 
 struct ContentView_Previews: PreviewProvider {
