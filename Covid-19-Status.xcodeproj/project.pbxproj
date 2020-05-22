@@ -16,6 +16,7 @@
 		BD3049FC2477690A00346FE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3049FA2477690A00346FE5 /* LaunchScreen.storyboard */; };
 		BD304A072477690A00346FE5 /* Covid_19_StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A062477690A00346FE5 /* Covid_19_StatusTests.swift */; };
 		BD304A122477690A00346FE5 /* Covid_19_StatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A112477690A00346FE5 /* Covid_19_StatusUITests.swift */; };
+		BD304A2024784DAC00346FE5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A1F24784DAC00346FE5 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BD304A0D2477690A00346FE5 /* Covid-19-StatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid-19-StatusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD304A112477690A00346FE5 /* Covid_19_StatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_19_StatusUITests.swift; sourceTree = "<group>"; };
 		BD304A132477690A00346FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD304A1F24784DAC00346FE5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				BD3049EC2477690400346FE5 /* AppDelegate.swift */,
 				BD3049EE2477690400346FE5 /* SceneDelegate.swift */,
 				BD3049F32477690400346FE5 /* ContentView.swift */,
+				BD304A1F24784DAC00346FE5 /* Response.swift */,
 				BD3049F52477690A00346FE5 /* Assets.xcassets */,
 				BD3049FA2477690A00346FE5 /* LaunchScreen.storyboard */,
 				BD3049FD2477690A00346FE5 /* Info.plist */,
@@ -274,6 +277,7 @@
 				BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */,
 				BD3049F42477690400346FE5 /* ContentView.swift in Sources */,
 				BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */,
+				BD304A2024784DAC00346FE5 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
