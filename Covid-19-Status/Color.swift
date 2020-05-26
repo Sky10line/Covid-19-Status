@@ -11,8 +11,7 @@ import SwiftUI
 
 extension Color {
     
-    public static let lightSteel: Color = Color(#colorLiteral(red: 0.9215686275, green: 0.937254902, blue: 0.9529411765, alpha: 1))
-    public static let lightSteelBlue: Color = Color(#colorLiteral(red: 0.6901960784, green: 0.7764705882, blue: 0.8509803922, alpha: 1))
-    public static let steelBlue: Color = Color(#colorLiteral(red: 0.2823529412, green: 0.4980392157, blue: 0.7137254902, alpha: 1))
-    public static let darkSteelBlue: Color = Color(#colorLiteral(red: 0.168627451, green: 0.2784313725, blue: 0.4392156863, alpha: 1))
+    public static let primary: Color = Color(#colorLiteral(red: 0, green: 0.4235294118, blue: 0.9411764706, alpha: 1))
+    public static let secondary: Color = Color(#colorLiteral(red: 0.9019607843, green: 0.9294117647, blue: 0.968627451, alpha: 1))
+    public static let featured: Color = Color(#colorLiteral(red: 0, green: 0.8941176471, blue: 0.9411764706, alpha: 1))
 }

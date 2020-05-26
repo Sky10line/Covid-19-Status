@@ -9,17 +9,42 @@
 import SwiftUI
 
 
-struct HomeTipsList: View {
+struct HomeBody: View {
     
     var tips = tipsData
+    @State var listSize: Int = 0
+    var appData: AppData
     
     var body: some View {
-        VStack {
+        if listSize == 0 {
+            listSize = tips.count
+        }
+        return VStack {
+            Text("Dados").font(.largeTitle).padding(.top)
+            //Botao que muda a selecao da tab bar
+            Button(action: {
+                self.appData.tabSelec = 2
+            }){
+                CellDataRec()
+                    .padding(.top)
+                    .foregroundColor(.black)
+            }
+            Button(action: {
+                self.appData.tabSelec = 2
+            }){
+                CustomButton(txt: "Ver mais dados")
+            }
             Text("Dicas").font(.largeTitle).padding(.top)
-            ForEach(0..<tips.count) { index in
+            ForEach(0..<listSize) { index in
                 if index % 2 == 0 {
                     HomeTipsRow(tips: self.tips, index: index)
                 }
+            }
+            
+            Button(action: {
+                self.appData.tabSelec = 1
+            }){
+                CustomButton(txt: "Ver mais dicas")
             }
         }
         .background(BackgroundRect())
@@ -27,48 +52,57 @@ struct HomeTipsList: View {
     
 }
 
+struct CustomButton: View {
+    
+    var bgColor = Color.secondary
+    var txt: String
+    var body: some View{
+        ZStack {
+            RoundedRectangle(cornerRadius: 15)
+                .fill(bgColor)
+                .frame(width: 320, height: 50)
+            Text(txt).font(.title)
+        }
+        .foregroundColor(.black)
+        .padding()
+    }
+}
+
 struct HomeTipsRow: View {
     
     let tips: [Tip]
     let index: Int
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-
+    
     var body: some View {
         HStack {
             Spacer()
             CellTips(tip: tips[index])
             Spacer()
-            if index + 1 < tips.count{
+            if index + 1 < tips.count {
                 CellTips(tip: tips[index + 1])
-                
             }else{
                 Text("").frame(width: size.w, height: size.h)
-                .background(Color.clear)
+                    .background(Color.clear)
             }
             Spacer()
-        }.padding()
+        }.padding([.horizontal,.top])
     }
-
+    
 }
 
 struct CellTips: View {
     
     let tip: Tip
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    
+    let color = Color.secondary
     var body: some View {
         NavigationLink(destination: TipsView(tip: tip)){
             ZStack(alignment: .bottom){
                 Text("").frame(width: size.w, height: size.h)
-                    .background(Color.lightSteelBlue)
+                    .background(color)
                     .cornerRadius(25)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(
-                                RadialGradient(gradient:
-                                    Gradient(colors: [.darkSteelBlue, .steelBlue]), center: .center, startRadius: 1, endRadius: 150)
-                            , lineWidth: 10))
-                    
+                
                 Text(tip.title).frame(width: 120)
                     .font(.headline)
                     .foregroundColor(Color.black)
@@ -80,7 +114,8 @@ struct CellTips: View {
 
 struct BackgroundRect: View {
     
-    var color: Color = .lightSteel
+    var startColor: Color = .primary
+    
     var tl: CGFloat = 30
     var tr: CGFloat = 30
     var bl: CGFloat = 0.0
@@ -109,14 +144,16 @@ struct BackgroundRect: View {
                 path.addLine(to: CGPoint(x: 0, y: tl))
                 path.addArc(center: CGPoint(x: tl, y: tl), radius: tl, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
             }
-            .fill(self.color)
+            .fill(self.startColor)
         }
     }
 }
 
-
 struct HomeTipsView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTipsList()
+        MainView().environmentObject(AppData())
+//                HomeBody(appData: AppData())
+//        CustomButton()
+        //        Text("")
     }
 }

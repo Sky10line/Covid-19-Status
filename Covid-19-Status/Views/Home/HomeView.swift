@@ -11,10 +11,11 @@ import SwiftUI
 struct HomeView: View {
     
     @Environment(\.localStatusBarStyle) var statusBarStyle
+    var appData: AppData
     
     @State var safeHide = false
     @State var offset: CGFloat = 0
-
+    var bgColor = Color.primary
     
     var body: some View {
         NavigationView {
@@ -31,9 +32,10 @@ struct HomeView: View {
                             }
                             return Text("")
                         }.background(Color.clear)
-                        HomeTipsList().offset(y: -60).zIndex(2)
+                        HomeBody(listSize: 4, appData: appData)
+                            .offset(y: -60).zIndex(2)
                     }
-                }.background(Color.lightSteel)
+                }.background(bgColor)
 //                Text("\(self.offset)").frame(height: 36)
 //            }
         .navigationBarTitle("Home")
@@ -54,7 +56,7 @@ struct HomeHeader: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(appData: AppData())
     }
 }
 
