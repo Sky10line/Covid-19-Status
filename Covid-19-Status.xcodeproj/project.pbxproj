@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1D19ED247D8B89002096E1 /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */; };
+		BD1D19EF247DB227002096E1 /* Refuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19EE247DB227002096E1 /* Refuses.swift */; };
 		BD3049ED2477690400346FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EC2477690400346FE5 /* AppDelegate.swift */; };
 		BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EE2477690400346FE5 /* SceneDelegate.swift */; };
 		BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3049F02477690400346FE5 /* Covid_19_Status.xcdatamodeld */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
+		BD1D19EE247DB227002096E1 /* Refuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refuses.swift; sourceTree = "<group>"; };
 		BD3049E92477690400346FE5 /* Covid-19-Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19-Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3049EC2477690400346FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3049EE2477690400346FE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				BD3049EC2477690400346FE5 /* AppDelegate.swift */,
 				BD3049EE2477690400346FE5 /* SceneDelegate.swift */,
 				BD3049F32477690400346FE5 /* ContentView.swift */,
+				BD1D19EE247DB227002096E1 /* Refuses.swift */,
+				BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */,
 				BD304A1F24784DAC00346FE5 /* Response.swift */,
 				BD3049F52477690A00346FE5 /* Assets.xcassets */,
 				BD3049FA2477690A00346FE5 /* LaunchScreen.storyboard */,
@@ -273,11 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1D19EF247DB227002096E1 /* Refuses.swift in Sources */,
 				BD3049ED2477690400346FE5 /* AppDelegate.swift in Sources */,
 				BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */,
 				BD3049F42477690400346FE5 /* ContentView.swift in Sources */,
 				BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */,
 				BD304A2024784DAC00346FE5 /* Response.swift in Sources */,
+				BD1D19ED247D8B89002096E1 /* DropDownMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
