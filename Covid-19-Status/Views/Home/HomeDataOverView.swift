@@ -20,7 +20,7 @@ struct HomeDataOverView: View {
 
 struct  CellDataRec: View {
     
-    var bgColor: Color = .white
+    var bgColor: Color = Color.secondary
     let size: (w: CGFloat, h:CGFloat) = (w: 320, h: 120)
     
     var body: some View {
@@ -45,7 +45,7 @@ struct  CellDataRec: View {
             }
         }.padding()//.padding([.horizontal, .top])
             .frame(width: size.w)
-            .background(Color.featured)
+            .background(bgColor)
             .cornerRadius(25)
     }
 }

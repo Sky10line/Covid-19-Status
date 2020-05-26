@@ -14,13 +14,16 @@ struct HomeBody: View {
     var tips = tipsData
     @State var listSize: Int = 0
     var appData: AppData
+    var txtColor = Color.secondary
     
     var body: some View {
         if listSize == 0 {
             listSize = tips.count
         }
         return VStack {
-            Text("Dados").font(.largeTitle).padding(.top)
+            Text("Dados").font(.system(size: 40, weight: .bold, design: .default))
+                .padding(.top)
+                .foregroundColor(txtColor)
             //Botao que muda a selecao da tab bar
             Button(action: {
                 self.appData.tabSelec = 2
@@ -34,7 +37,9 @@ struct HomeBody: View {
             }){
                 CustomButton(txt: "Ver mais dados")
             }
-            Text("Dicas").font(.largeTitle).padding(.top)
+            Text("Dicas").font(.system(size: 40, weight: .bold, design: .default))
+                .padding(.top)
+            .foregroundColor(txtColor)
             ForEach(0..<listSize) { index in
                 if index % 2 == 0 {
                     HomeTipsRow(tips: self.tips, index: index)
@@ -54,7 +59,7 @@ struct HomeBody: View {
 
 struct CustomButton: View {
     
-    var bgColor = Color.secondary
+    var bgColor = Color.featured
     var txt: String
     var body: some View{
         ZStack {
