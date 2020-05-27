@@ -13,20 +13,22 @@ struct Cases: View {
     var suspects: Int
     var body: some View {
         VStack(alignment: .leading, spacing: 18, content: {
-            Text("Casos").font(.headline).fontWeight(.heavy).foregroundColor(Color(red: 0.3059, green: 0.6353, blue: 0.5255, opacity: 1.0)).multilineTextAlignment(.leading)
+            Text("Casos").font(.title).fontWeight(.heavy).foregroundColor(Color.white).multilineTextAlignment(.leading)
+            
+            
             HStack{
-                Text(String(cases) + "\nConfirmados").font(.headline).fontWeight(.bold).foregroundColor(Color.black).multilineTextAlignment(.center)
+                Spacer()
+                Text(String(cases) + "\nConfirmados").font(.headline).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
                 
                 Spacer()
                 
-                Text(String(suspects) + "\nSuspeitos").font(.headline).fontWeight(.bold).foregroundColor(Color.black).multilineTextAlignment(.center)
+                Text(String(suspects) + "\nSuspeitos").font(.headline).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
+                Spacer()
                 
             }
-            .frame(width: 300.0)
-        }).padding(EdgeInsets(top: 40, leading: 20, bottom: 60, trailing: 20)).overlay(
-        RoundedRectangle(cornerRadius: 10)
-            .stroke(Color(red: 0.3059, green: 0.6353, blue: 0.5255, opacity: 1.0), lineWidth: 5))
-            .background(Color.white)
+            .frame(width: 287.0)
+        }).padding(EdgeInsets(top: 20, leading: 30, bottom: 60, trailing: 30))
+            .background(Color(red: 0.4314, green: 0.5804, blue: 0.8510, opacity: 1.0))
             .cornerRadius(10.0).shadow(radius: 10.0)
     }
 }

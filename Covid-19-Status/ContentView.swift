@@ -15,7 +15,9 @@ struct ContentView: View {
     var body: some View {
         let sp = catchdata(endereco: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp")
         return VStack {
-            Refuses(refuses: sp!.refuses).offset(y:-260)
+            Refuses(refuses: sp!.refuses).offset(y:-80)
+            Cases(cases: sp!.cases, suspects: sp!.suspects).offset(y: -60)
+            Obitos(deaths: sp!.deaths).offset(y:-40)
             
         }
     }

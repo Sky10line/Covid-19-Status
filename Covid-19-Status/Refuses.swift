@@ -12,14 +12,12 @@ struct Refuses: View {
     var refuses: Int
     var body: some View {
         VStack(alignment: .leading, spacing: 18, content: {
-        Text("Casos recusados").font(.headline).foregroundColor(Color.white).multilineTextAlignment(.leading)
+            Text("Casos recuperados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
         
-        Text(String(refuses)).font(.largeTitle).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
+            Text(String(refuses)).font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
         
-        }).padding(EdgeInsets(top: 40, leading: 20, bottom: 60, trailing: 180)).overlay(
-        RoundedRectangle(cornerRadius: 10)
-            .stroke(Color.white, lineWidth: 5))
-        .background(Color(red: 0.3059, green: 0.6353, blue: 0.5255, opacity: 1.0))
+        }).frame(width: 287).padding(EdgeInsets(top: 20, leading: 13, bottom: 60, trailing: 47))
+            .background(Color(red: 0.3412, green: 0.4353, blue: 0.7647, opacity: 1.0))
             .cornerRadius(10.0).shadow(radius: 10.0)
     
     }
