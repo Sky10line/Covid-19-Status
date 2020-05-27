@@ -17,6 +17,8 @@
 		8986B59B2479A7A300DA98FE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986B59A2479A7A300DA98FE /* Color.swift */; };
 		89E4C12D247C55E30036ABDF /* HomeDataOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C12C247C55E30036ABDF /* HomeDataOverView.swift */; };
 		89E4C12F247D96EB0036ABDF /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C12E247D96EB0036ABDF /* AppData.swift */; };
+		89E4C131247EEB290036ABDF /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C130247EEB290036ABDF /* Structs.swift */; };
+		89E4C133247EEBED0036ABDF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C132247EEBED0036ABDF /* DataService.swift */; };
 		BD3049ED2477690400346FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EC2477690400346FE5 /* AppDelegate.swift */; };
 		BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EE2477690400346FE5 /* SceneDelegate.swift */; };
 		BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3049F02477690400346FE5 /* Covid_19_Status.xcdatamodeld */; };
@@ -56,6 +58,8 @@
 		8986B59A2479A7A300DA98FE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		89E4C12C247C55E30036ABDF /* HomeDataOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataOverView.swift; sourceTree = "<group>"; };
 		89E4C12E247D96EB0036ABDF /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		89E4C130247EEB290036ABDF /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		89E4C132247EEBED0036ABDF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BD3049E92477690400346FE5 /* Covid-19-Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19-Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3049EC2477690400346FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3049EE2477690400346FE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				890EECE32479024C00CC0DBC /* Data.swift */,
 				89E4C12E247D96EB0036ABDF /* AppData.swift */,
+				89E4C130247EEB290036ABDF /* Structs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				890EECE02478FF3600CC0DBC /* Resources */,
 				BD3049F72477690A00346FE5 /* Preview Content */,
 				890EECDD2478DB4B00CC0DBC /* StatusBarColor.swift */,
+				89E4C132247EEBED0036ABDF /* DataService.swift */,
 			);
 			path = "Covid-19-Status";
 			sourceTree = "<group>";
@@ -342,7 +348,9 @@
 				890EECDE2478DB4B00CC0DBC /* StatusBarColor.swift in Sources */,
 				BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */,
 				89E4C12D247C55E30036ABDF /* HomeDataOverView.swift in Sources */,
+				89E4C133247EEBED0036ABDF /* DataService.swift in Sources */,
 				890EECDC24787FF000CC0DBC /* TipsView.swift in Sources */,
+				89E4C131247EEB290036ABDF /* Structs.swift in Sources */,
 				BD3049F42477690400346FE5 /* ContentView.swift in Sources */,
 				89092F9A2478578100A58C1F /* HomeView.swift in Sources */,
 				BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */,

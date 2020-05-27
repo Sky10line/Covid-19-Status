@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State private var selection = 0
+//    @State private var selection = 0
     @EnvironmentObject var appData: AppData
     
     var color = Color.primary

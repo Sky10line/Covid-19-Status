@@ -15,6 +15,7 @@ struct HomeView: View {
     
     @State var safeHide = false
     @State var offset: CGFloat = 0
+    
     var bgColor = Color.primary
     
     var body: some View {
