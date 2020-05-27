@@ -9,7 +9,7 @@
 import Foundation
 
 struct Response: Codable {
-    var state: String
+    let state: String
     let cases: Int
     let deaths: Int
     let suspects: Int

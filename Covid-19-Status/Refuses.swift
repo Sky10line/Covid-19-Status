@@ -12,7 +12,7 @@ struct Refuses: View {
     var refuses: Int
     var body: some View {
         VStack(alignment: .leading, spacing: 18, content: {
-        Text("Casos recuperados").font(.headline).foregroundColor(Color.white).multilineTextAlignment(.leading)
+        Text("Casos recusados").font(.headline).foregroundColor(Color.white).multilineTextAlignment(.leading)
         
         Text(String(refuses)).font(.largeTitle).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
         
