@@ -9,26 +9,67 @@ import Foundation
 
 class DataService {
     
+    private static let localFileName = "teste.json"
     private static let url = "https://covid19-brazil-api.now.sh/api/report/v1"
-    private static let state = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf"
-    private static let brasil = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
-    private static let allContries = "https://covid19-brazil-api.now.sh/api/report/v1/countries"
+    private static let stateURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf"
+    private static let brasilURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
+    private static let allContriesURL = "https://covid19-brazil-api.now.sh/api/report/v1/countries"
     
-    static func getAllContries() -> Countries{
-        return request(allContries)
+    private static let connectionCheck = ConnectionCheck()
+    
+    static var localData: AllInfos {
+        get{
+            if fileExists(filename: localFileName) {
+                let aux: AllInfos = loadDinamicFile(localFileName)
+                return aux
+            } else {
+                let aux: AllInfos = load("localData.json")
+                return aux
+            }
+        } set {}
     }
     
-    static func getCountry(_ country: String) -> ByCountry {
-        return request("\(url)/\(country)")
+    static func getAllContries() -> Countries{
+        if connectionCheck.isConnection  && isUpdated() {
+        updateLocalData()
+            return request(allContriesURL)
+        }
+        return Countries(data: localData.countries)
+    }
+    
+    static func getCountry(_ country: String) -> ByCountry? {
+        if connectionCheck.isConnection  && isUpdated() {
+        updateLocalData()
+            return request("\(url)/\(country)")
+        }
+        for countryObj in localData.countries {
+            if countryObj.country.uppercased() == country.uppercased() {
+                return ByCountry(data: countryObj)
+            }
+        }
+        return nil
     }
     
     static func getAllStates() -> Brazil {
-        return request(url)
+        if connectionCheck.isConnection  && isUpdated() {
+        updateLocalData()
+            return request(url)
+        }
+        return Brazil(data: localData.states)
     }
     
-    static func getState(_ state: String) -> BrazilianState {
-        return request("\(state)/\(state)")
-    }
+    static func getState(_ state: String) -> BrazilianState? {
+        if connectionCheck.isConnection  && isUpdated() {
+            updateLocalData()
+            return request("\(stateURL)/\(state)")
+        }
+        for stateObj in localData.states {
+            if stateObj.uf == state.uppercased() {
+                    return stateObj
+                }
+            }
+            return nil
+        }
     
     private static func request<T:Decodable>(_ teste: String) -> T {
         var res: T!
@@ -50,5 +91,37 @@ class DataService {
         }
         group.wait()
         return res
+    }
+    
+    private static func updateLocalData() {
+        let date = Date()
+        let countries = DataService.getAllContries()
+        let states = DataService.getAllStates()
+        
+        let lastAllInfos = AllInfos(lastUpdate: "\(date)", countries: countries.data, states: states.data)
+        localData = lastAllInfos
+        save(data: lastAllInfos, filename: localFileName)
+    }
+    
+    private static func isUpdated() -> Bool {
+        let lastUpdate = dateStringToDate(date: localData.lastUpdate)
+        let elapsed = Date().timeIntervalSince(lastUpdate)
+        
+        let min  = (elapsed / 6.0) / 100000.0
+        
+        if min > 60 {
+            return true
+        } else {
+            return false
+        }
+        
+    }
+    
+    private static func dateStringToDate(date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+        let date = dateFormatter.date(from:date)!
+
+        return date
     }
 }

@@ -22,7 +22,7 @@ struct  CellDataRec: View {
     
     var bgColor: Color = Color.secondary
     let size: (w: CGFloat, h:CGFloat) = (w: 320, h: 120)
-    let brazil = DataService.getCountry("brazil")
+    let brazil = DataService.getCountry("brazil")!
     
     var body: some View {
         ZStack (alignment: .leading) {

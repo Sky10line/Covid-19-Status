@@ -41,33 +41,22 @@ class ConnectionCheck {
         checkReachable()
     }
     
-    @objc func teste() {
-        print("Teste")
-    }
-    
     func checkReachable() {
         var flags = SCNetworkReachabilityFlags()
         SCNetworkReachabilityGetFlags(self.reachability!, &flags)
         
         if isNetworkReachable(with: flags){
-            print("Connection yes")
             
-            startNotification {
-                self.teste()
-            }
             stopTringConnection()
             if flags.contains(.isWWAN) {
                 connType = .mobile
-                print("Mobile")
                 return
             } else {
                 connType = .wifi
-                print("Wifi")
             }
         } else if !isNetworkReachable(with: flags) {
             connType = .offline
             startTryConnection()
-            print("Sorry :(")
         }
     }
     
@@ -90,9 +79,7 @@ class ConnectionCheck {
     }
     
     private func startTryConnection(){
-        print("start try")
         if timer == nil {
-            print("start Try 2")
             timer = Timer.scheduledTimer(withTimeInterval: self.delay, repeats: true) { i in
                 self.tryConnection()
             }
