@@ -24,6 +24,7 @@ struct TipsView: View {
                 }
                 Text(tip.title).font(.title).padding(.vertical, 30)
                 Text(tip.text).multilineTextAlignment(.leading)
+                Text(tip.source).font(.caption).padding(.vertical, 30)
                 Spacer()
             }.padding()
         }
@@ -32,6 +33,6 @@ struct TipsView: View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView(tip: tipsData[0])
+        TipsView(tip: tipsData[5])
     }
 }
