@@ -21,14 +21,14 @@ struct MainView: View {
                 Text("Home")
             }.tag(0)
             
-            ContentView().tabItem {
+            ContentView(url: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp").tabItem {
                 Text("Dicas")
             }.tag(1)
             
             Button(action: {
                 
             }){
-                Text("Teste")
+                ContentView(url: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp")
                 }.tabItem{
                     Text("Dados")
                 }.tag(2)

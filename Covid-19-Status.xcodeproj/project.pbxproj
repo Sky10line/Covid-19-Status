@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD1D19ED247D8B89002096E1 /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */; };
-		BD1D19EF247DB227002096E1 /* Refuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19EE247DB227002096E1 /* Refuses.swift */; };
-		BD1D19F1247EDB37002096E1 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F0247EDB37002096E1 /* Cases.swift */; };
-		BD1D19F3247EFDFC002096E1 /* Obitos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F2247EFDFC002096E1 /* Obitos.swift */; };
 		89092F9A2478578100A58C1F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89092F992478578100A58C1F /* HomeView.swift */; };
 		89092F9D24785ACC00A58C1F /* HomeBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89092F9C24785ACC00A58C1F /* HomeBody.swift */; };
 		890EECDA24786CEF00CC0DBC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890EECD924786CEF00CC0DBC /* MainView.swift */; };
@@ -23,6 +19,12 @@
 		89E4C12F247D96EB0036ABDF /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C12E247D96EB0036ABDF /* AppData.swift */; };
 		89E4C131247EEB290036ABDF /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C130247EEB290036ABDF /* Structs.swift */; };
 		89E4C133247EEBED0036ABDF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C132247EEBED0036ABDF /* DataService.swift */; };
+		BD1D19ED247D8B89002096E1 /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */; };
+		BD1D19EF247DB227002096E1 /* Refuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19EE247DB227002096E1 /* Refuses.swift */; };
+		BD1D19F1247EDB37002096E1 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F0247EDB37002096E1 /* Cases.swift */; };
+		BD1D19F3247EFDFC002096E1 /* Obitos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F2247EFDFC002096E1 /* Obitos.swift */; };
+		BD1D19F7248172DB002096E1 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F6248172DB002096E1 /* BarView.swift */; };
+		BD1D19F924817E52002096E1 /* SelectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F824817E52002096E1 /* SelectionData.swift */; };
 		BD3049ED2477690400346FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EC2477690400346FE5 /* AppDelegate.swift */; };
 		BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EE2477690400346FE5 /* SceneDelegate.swift */; };
 		BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3049F02477690400346FE5 /* Covid_19_Status.xcdatamodeld */; };
@@ -53,10 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
-		BD1D19EE247DB227002096E1 /* Refuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refuses.swift; sourceTree = "<group>"; };
-		BD1D19F0247EDB37002096E1 /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
-		BD1D19F2247EFDFC002096E1 /* Obitos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obitos.swift; sourceTree = "<group>"; };
 		89092F992478578100A58C1F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		89092F9C24785ACC00A58C1F /* HomeBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBody.swift; sourceTree = "<group>"; };
 		890EECD924786CEF00CC0DBC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -69,6 +67,12 @@
 		89E4C12E247D96EB0036ABDF /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		89E4C130247EEB290036ABDF /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		89E4C132247EEBED0036ABDF /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
+		BD1D19EE247DB227002096E1 /* Refuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refuses.swift; sourceTree = "<group>"; };
+		BD1D19F0247EDB37002096E1 /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
+		BD1D19F2247EFDFC002096E1 /* Obitos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obitos.swift; sourceTree = "<group>"; };
+		BD1D19F6248172DB002096E1 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		BD1D19F824817E52002096E1 /* SelectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionData.swift; sourceTree = "<group>"; };
 		BD3049E92477690400346FE5 /* Covid-19-Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19-Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3049EC2477690400346FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3049EE2477690400346FE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		89092F982478575900A58C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD1D19F524802A9C002096E1 /* Dados */,
 				890EECDB24787FF000CC0DBC /* TipsView.swift */,
 				89092F9B24785A9200A58C1F /* Home */,
 				890EECD924786CEF00CC0DBC /* MainView.swift */,
@@ -138,6 +143,11 @@
 				890EECE32479024C00CC0DBC /* Data.swift */,
 				89E4C12E247D96EB0036ABDF /* AppData.swift */,
 				89E4C130247EEB290036ABDF /* Structs.swift */,
+				BD1D19EE247DB227002096E1 /* Refuses.swift */,
+				BD1D19F0247EDB37002096E1 /* Cases.swift */,
+				BD1D19F2247EFDFC002096E1 /* Obitos.swift */,
+				BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */,
+				BD1D19F6248172DB002096E1 /* BarView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +158,15 @@
 				890EECE12478FFD600CC0DBC /* tipsData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD1D19F524802A9C002096E1 /* Dados */ = {
+			isa = PBXGroup;
+			children = (
+				BD3049F32477690400346FE5 /* ContentView.swift */,
+				BD1D19F824817E52002096E1 /* SelectionData.swift */,
+			);
+			path = Dados;
 			sourceTree = "<group>";
 		};
 		BD3049E02477690400346FE5 = {
@@ -175,12 +194,7 @@
 			children = (
 				BD3049EC2477690400346FE5 /* AppDelegate.swift */,
 				BD3049EE2477690400346FE5 /* SceneDelegate.swift */,
-				BD3049F32477690400346FE5 /* ContentView.swift */,
 				BD304A1F24784DAC00346FE5 /* Response.swift */,
-				BD1D19EE247DB227002096E1 /* Refuses.swift */,
-				BD1D19F0247EDB37002096E1 /* Cases.swift */,
-				BD1D19F2247EFDFC002096E1 /* Obitos.swift */,
-				BD1D19EC247D8B89002096E1 /* DropDownMenu.swift */,
 				8986B59A2479A7A300DA98FE /* Color.swift */,
 				BD3049F52477690A00346FE5 /* Assets.xcassets */,
 				890EECDF2478FF2300CC0DBC /* Model */,
@@ -356,6 +370,7 @@
 			files = (
 				BD1D19EF247DB227002096E1 /* Refuses.swift in Sources */,
 				89E4C12F247D96EB0036ABDF /* AppData.swift in Sources */,
+				BD1D19F924817E52002096E1 /* SelectionData.swift in Sources */,
 				BD3049ED2477690400346FE5 /* AppDelegate.swift in Sources */,
 				890EECE42479024C00CC0DBC /* Data.swift in Sources */,
 				8986B59B2479A7A300DA98FE /* Color.swift in Sources */,
@@ -373,6 +388,7 @@
 				BD1D19F1247EDB37002096E1 /* Cases.swift in Sources */,
 				BD1D19F3247EFDFC002096E1 /* Obitos.swift in Sources */,
 				BD304A2024784DAC00346FE5 /* Response.swift in Sources */,
+				BD1D19F7248172DB002096E1 /* BarView.swift in Sources */,
 				BD1D19ED247D8B89002096E1 /* DropDownMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

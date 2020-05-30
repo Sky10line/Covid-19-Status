@@ -12,14 +12,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    var url: String
     var body: some View {
-        let sp = catchdata(endereco: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp")
-        return VStack {
-            Refuses(refuses: sp!.refuses).offset(y:-80)
-            Cases(cases: sp!.cases, suspects: sp!.suspects).offset(y: -60)
-            Obitos(deaths: sp!.deaths).offset(y:-40)
-            
+        let res = catchdata(endereco: url)
+        return NavigationView {
+             VStack {
+                Refuses(refuses: res!.refuses).offset(y:-80)
+                
+                Cases(cases: res!.cases, suspects: res!.suspects).offset(y: -60)
+                
+                Obitos(deaths: res!.deaths).offset(y:-40)
+                
+                NavigationLink(destination: SelectionData()) {
+                    Text("funciona porra!")
+                }
+            }
+
         }
+        .navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
     }
 }
 
@@ -39,6 +49,10 @@ func catchdata(endereco: String) -> Response? {
                    let teste = try JSONDecoder().decode(Response.self, from: data)
                     print(teste.state)
                     res = teste
+                    
+//                    let teste = String(data: data, encoding: .utf8)
+                    
+                    print(teste)
                 } catch let erro{
                     print(erro)
                 }
@@ -53,7 +67,7 @@ func catchdata(endereco: String) -> Response? {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(url: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp")
     }
 }
 
