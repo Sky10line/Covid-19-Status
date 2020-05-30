@@ -25,7 +25,7 @@ struct HomeView: View {
                         HomeHeader().frame(height: 270).zIndex(1)
                         GeometryReader { innerGeo -> Text in
                             self.offset = innerGeo.frame(in: .global).minY + 60
-                            if self.offset < 120{
+                            if self.offset < 120 {
                                 self.statusBarStyle.currentStyle = .darkContent
                             } else{
                                 self.statusBarStyle.currentStyle = .lightContent

@@ -42,7 +42,7 @@ struct HomeBody: View {
             .foregroundColor(txtColor)
             ForEach(0..<listSize) { index in
                 if index % 2 == 0 {
-                    HomeTipsRow(tips: self.tips, index: index)
+                    HomeTipsRow(tips: self.tips, index: index, cellColor: Color.secondary)
                 }
             }
             
@@ -78,14 +78,16 @@ struct HomeTipsRow: View {
     let tips: [Tip]
     let index: Int
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
+    let cellColor: Color
+    var cellForegroundColor: Color = Color.black
     
     var body: some View {
         HStack {
             Spacer()
-            CellTips(tip: tips[index])
+            CellTips(tip: tips[index], cellcColor: cellColor,foregroundColor: cellForegroundColor)
             Spacer()
             if index + 1 < tips.count {
-                CellTips(tip: tips[index + 1])
+                CellTips(tip: tips[index + 1], cellcColor: cellColor, foregroundColor: cellForegroundColor)
             }else{
                 Text("").frame(width: size.w, height: size.h)
                     .background(Color.clear)
@@ -100,17 +102,18 @@ struct CellTips: View {
     
     let tip: Tip
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    let color = Color.secondary
+    let cellcColor: Color
+    let foregroundColor: Color
     var body: some View {
-        NavigationLink(destination: TipsView(tip: tip)){
+        NavigationLink(destination: TipView(tip: tip)){
             ZStack(alignment: .bottom){
                 Text("").frame(width: size.w, height: size.h)
-                    .background(color)
+                    .background(cellcColor)
                     .cornerRadius(25)
                 
                 Text(tip.title).frame(width: 120)
                     .font(.headline)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(foregroundColor)
                     .offset(y: -16)
             }
         }
