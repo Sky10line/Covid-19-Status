@@ -13,10 +13,19 @@ struct TipsView: View {
     var tip: Tip
     
     var body: some View {
-        VStack{
-            Text(tip.title).font(.title)
-            Text(tip.text)
-            
+        ScrollView{
+            VStack{
+                HStack {
+                    Image("covid")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .clipShape(Circle())
+                    Spacer()
+                }
+                Text(tip.title).font(.title).padding(.vertical, 30)
+                Text(tip.text).multilineTextAlignment(.leading)
+                Spacer()
+            }.padding()
         }
     }
 }
