@@ -30,6 +30,11 @@ struct TipsMainView: View {
                                 HomeTipsRow(tips: self.tips, index: index, cellColor: self.cellColor, cellForegroundColor: Color.white)
                             }
                         }
+                        Button(action: {
+                            UIApplication.shared.open(URL(string: "https://coronavirus.saude.gov.br")!)
+                        }){
+                            CustomButton(txt: "Informacoes oficiais")
+                        }
                     }
                 }.zIndex(0)
             }.background(bgColor)
