@@ -9,23 +9,15 @@
 import SwiftUI
 
 struct SelectionData: View {
+    var state: BrazilianState
     var body: some View {
-//        var options = DataService.getAllStates()
-        NavigationView{
-
-               NavigationLink(destination: ContentView(url: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp")) {
-                        Text("soh bora")
-                    }.navigationBarHidden(true)
-
-
-
-        }
-        .navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+        Text(state.state)
+        
     }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectionData()
+        SelectionData(state: DataService.getAllStates().data[1])
     }
 }

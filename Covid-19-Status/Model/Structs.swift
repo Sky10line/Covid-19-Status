@@ -27,7 +27,8 @@ struct Brazil: Codable {
     let data: [BrazilianState]
 }
 
-struct BrazilianState: Codable {
+struct BrazilianState: Hashable, Codable, Identifiable {
+    var id: Int
     let uid: Int
     let uf: String
     let state: String

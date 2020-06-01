@@ -11,23 +11,55 @@
 
 import SwiftUI
 
+class ChangeValues: ObservableObject {
+    @Published var isPresented = false
+    @Published var score2 = 7
+}
+
 struct ContentView: View {
+    @ObservedObject var vm: ChangeValues = ChangeValues()
     var url: String
     var body: some View {
         let res = catchdata(endereco: url)
-        return NavigationView {
-             VStack {
-                Refuses(refuses: res!.refuses).offset(y:-80)
-                
-                Cases(cases: res!.cases, suspects: res!.suspects).offset(y: -60)
-                
-                Obitos(deaths: res!.deaths).offset(y:-40)
-                
-                NavigationLink(destination: SelectionData()) {
-                    Text("funciona porra!")
-                }
+        return ZStack{
+            NavigationView {
+                 VStack {
+                    VStack{
+                    Refuses(refuses: res!.refuses).offset(y:-80)
+                    
+                    Cases(cases: res!.cases, suspects: res!.suspects).offset(y: -60)
+                    
+                    Obitos(deaths: res!.deaths).offset(y:-40)
+                    }.offset(y:-50)
+                    Button(action: {
+                        withAnimation{
+                            self.vm.isPresented.toggle()
+                        }
+                        print(String(self.vm.isPresented))
+                        }, label: {
+                            Text("btnTeste")
+                        })
+                    
+                    }
             }
-
+            
+            ZStack{
+                VStack{
+                    
+                    
+                    Button(action: {
+                    withAnimation{
+                        self.vm.isPresented.toggle()
+                    }
+                    print(String(self.vm.isPresented))
+                    }, label: {
+                        Text("Voltar")
+                            .foregroundColor(Color.purple)
+                    }).offset(x:-160, y:-790)
+                    
+                }
+            }.offset(x:0, y: vm.isPresented ? 0: UIApplication.shared.keyWindow?.frame.height ?? 0)
+            
         }
         .navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
     }
