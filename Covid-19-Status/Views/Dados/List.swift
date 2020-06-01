@@ -9,15 +9,30 @@
 import SwiftUI
 
 struct List: View {
+    
+    @ObservedObject var controler: ChangeValues
+    
     var body: some View {
-        List(DataService.getAllContries, id: \.id) { BrazilianState in
-        SelectionData(state: BrazilianState)
-        }.navigationBarTitle(Text("Testando"))
+        //        List(DataService.getAllContries, id: \.id) { BrazilianState in
+        //        SelectionData(state: BrazilianState)
+        //        }.navigationBarTitle(Text("Testando"))
+        VStack {
+            Text("\(controler.value)")
+            Button(action: {
+                self.controler.value += 10
+            }){
+                Text("\(controler.value)")
+            }
+        }
+    }
+    
+    init(controller: ChangeValues) {
+        self.controler = controller
     }
 }
 
 struct List_Previews: PreviewProvider {
     static var previews: some View {
-        List()
+        List(controller: ChangeValues())
     }
 }
