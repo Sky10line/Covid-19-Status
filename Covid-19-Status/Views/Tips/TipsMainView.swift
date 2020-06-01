@@ -8,9 +8,43 @@
 
 import SwiftUI
 
+class TipsViewModel: ObservableObject {
+    private let tips: [Tip] = tipsData
+    @Published var leftList: [Tip] = []
+    @Published var rightList: [Tip] = []
+    
+    init() {
+        splitArray(list: tips)
+    }
+    
+    func filterList(searcTerm: String) {
+        print("Change filter")
+        let filtredList = self.tips.filter {
+            return searcTerm.isEmpty ? true : $0.title.contains(searcTerm)
+        }
+        leftList = []
+        rightList = []
+        splitArray(list: filtredList)
+    }
+    
+    func splitArray(list: [Tip]){
+        for i in 0...list.count - 1 {
+            if i % 2 == 0 {
+                leftList.append(list[i])
+            } else{
+                rightList.append(list[i])
+            }
+        }
+        
+    }
+}
+
 struct TipsMainView: View {
     
     @Environment(\.localStatusBarStyle) var statusBarStyle
+    @ObservedObject var model = TipsViewModel()
+    @State var searchTerm: String = ""
+    
     var tips = tipsData
     let bgColor = Color.secondary
     let cellColor = Color.primary
@@ -20,16 +54,41 @@ struct TipsMainView: View {
         return NavigationView{
             VStack{
                 HStack {
-                    TipsMainViewHeader()
+                    VStack {
+                        Rectangle()
+                            .fill(bgColor)
+                            .frame(height: 24)
+                        HStack {
+                            Text("Dicas").font(.title).bold()
+                            Spacer()
+                        }
+                    }.padding()
                 }.zIndex(1)
                     .background(bgColor)
                 ScrollView {
                     VStack {
-                        ForEach(0..<tips.count) { index in
-                            if index % 2 == 0 {
-                                HomeTipsRow(tips: self.tips, index: index, cellColor: self.cellColor, cellForegroundColor: Color.white)
+                        SearchBar(text: $searchTerm, model: model).zIndex(1).padding()
+                        
+                        HStack {
+                            Spacer()
+                            VStack {
+                                ForEach(model.leftList, id: \.self) { tip in
+                                        CellTips(tip: tip, cellcColor: self.cellColor, foregroundColor: Color.white).padding(.vertical)
+                                }
                             }
+                            Spacer()
+                            VStack {
+                                ForEach(model.rightList, id: \.self) { tip in
+                                    CellTips(tip: tip, cellcColor: self.cellColor, foregroundColor: Color.white).padding(.vertical)
+                                }
+                                if model.rightList.count < model.leftList.count {
+                                    Text("").frame(width: 150, height: 200)
+                                    .background(Color.clear)
+                                }
+                            }
+                            Spacer()
                         }
+                        
                         Button(action: {
                             UIApplication.shared.open(URL(string: "https://coronavirus.saude.gov.br")!)
                         }){
@@ -38,7 +97,7 @@ struct TipsMainView: View {
                     }
                 }.zIndex(0)
             }.background(bgColor)
-            .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea(.top)
         }
         .navigationBarTitle("Dicas")
         .navigationBarHidden(true)
@@ -52,19 +111,19 @@ struct TipsMainViewHeader: View {
     let bgColor = Color.secondary
     
     var body: some View {
-//        ZStack{
-            VStack {
-                Rectangle()
-                    .fill(bgColor)
+        //        ZStack{
+        VStack {
+            Rectangle()
+                .fill(bgColor)
                 .frame(height: 24)
-                HStack {
-                    Text("Dicas").font(.title).bold()
-                    Spacer()
-                    Rectangle().frame(height: 32)
-                    
-                }.padding()
-            }
-//        }
+            HStack {
+                Text("Dicas").font(.title).bold()
+                Spacer()
+                //                    Rectangle().frame(height: 32)
+                //                    SearchBar()
+            }.padding()
+        }
+        //        }
         
     }
 }

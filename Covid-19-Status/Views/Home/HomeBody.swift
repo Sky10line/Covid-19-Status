@@ -42,7 +42,7 @@ struct HomeBody: View {
             .foregroundColor(txtColor)
             ForEach(0..<listSize) { index in
                 if index % 2 == 0 {
-                    HomeTipsRow(tips: self.tips, index: index, cellColor: Color.secondary)
+                    HomeTipsRow(tips: self.tips, index: index)
                 }
             }
             
@@ -78,7 +78,7 @@ struct HomeTipsRow: View {
     let tips: [Tip]
     let index: Int
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    let cellColor: Color
+    var cellColor: Color = Color.secondary
     var cellForegroundColor: Color = Color.black
     
     var body: some View {
@@ -102,7 +102,7 @@ struct CellTips: View {
     
     let tip: Tip
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    let cellcColor: Color
+    var cellcColor: Color = Color.secondary
     let foregroundColor: Color
     var body: some View {
         NavigationLink(destination: TipView(tip: tip)){
