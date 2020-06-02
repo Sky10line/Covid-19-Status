@@ -21,14 +21,14 @@ struct MainView: View {
                 Text("Home")
             }.tag(0)
             
-            ContentView().tabItem {
+            ContentView(idState: "sp").tabItem {
                 Text("Dicas")
             }.tag(1)
             
             Button(action: {
                 
             }){
-                Text("Teste")
+                ContentView(idState: "sp")
                 }.tabItem{
                     Text("Dados")
                 }.tag(2)

@@ -30,6 +30,7 @@
 		BD3049FC2477690A00346FE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3049FA2477690A00346FE5 /* LaunchScreen.storyboard */; };
 		BD304A072477690A00346FE5 /* Covid_19_StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A062477690A00346FE5 /* Covid_19_StatusTests.swift */; };
 		BD304A122477690A00346FE5 /* Covid_19_StatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A112477690A00346FE5 /* Covid_19_StatusUITests.swift */; };
+		BDD22DD42486E69A00EC2F27 /* SelectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD22DD32486E69A00EC2F27 /* SelectionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BD304A0D2477690A00346FE5 /* Covid-19-StatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid-19-StatusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD304A112477690A00346FE5 /* Covid_19_StatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_19_StatusUITests.swift; sourceTree = "<group>"; };
 		BD304A132477690A00346FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD22DD32486E69A00EC2F27 /* SelectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		89092F9B24785A9200A58C1F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BDD22DD22486E67600EC2F27 /* Dados */,
 				89092F992478578100A58C1F /* HomeView.swift */,
 				89092F9C24785ACC00A58C1F /* HomeBody.swift */,
 				89E4C12C247C55E30036ABDF /* HomeDataOverView.swift */,
@@ -170,7 +173,6 @@
 			children = (
 				BD3049EC2477690400346FE5 /* AppDelegate.swift */,
 				BD3049EE2477690400346FE5 /* SceneDelegate.swift */,
-				BD3049F32477690400346FE5 /* ContentView.swift */,
 				8986B59A2479A7A300DA98FE /* Color.swift */,
 				89E4C138248052A80036ABDF /* ConnectionCheck.swift */,
 				BD3049F52477690A00346FE5 /* Assets.xcassets */,
@@ -211,6 +213,15 @@
 				BD304A132477690A00346FE5 /* Info.plist */,
 			);
 			path = "Covid-19-StatusUITests";
+			sourceTree = "<group>";
+		};
+		BDD22DD22486E67600EC2F27 /* Dados */ = {
+			isa = PBXGroup;
+			children = (
+				BD3049F32477690400346FE5 /* ContentView.swift */,
+				BDD22DD32486E69A00EC2F27 /* SelectionData.swift */,
+			);
+			path = Dados;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				890EECDC24787FF000CC0DBC /* TipsView.swift in Sources */,
 				89E4C131247EEB290036ABDF /* Structs.swift in Sources */,
 				BD3049F42477690400346FE5 /* ContentView.swift in Sources */,
+				BDD22DD42486E69A00EC2F27 /* SelectionData.swift in Sources */,
 				89092F9A2478578100A58C1F /* HomeView.swift in Sources */,
 				89E4C139248052A80036ABDF /* ConnectionCheck.swift in Sources */,
 				BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */,
