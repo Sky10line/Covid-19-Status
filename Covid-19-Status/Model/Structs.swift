@@ -38,3 +38,9 @@ struct BrazilianState: Hashable, Codable, Identifiable {
     let refuses: Int
     let datetime: String
 }
+
+struct AllInfos: Codable {
+    let lastUpdate: String
+    let countries: [Country]
+    let states: [BrazilianState]
+}

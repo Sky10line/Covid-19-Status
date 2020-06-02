@@ -26,6 +26,8 @@
 		BD1D19F7248172DB002096E1 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F6248172DB002096E1 /* BarView.swift */; };
 		BD1D19F924817E52002096E1 /* SelectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19F824817E52002096E1 /* SelectionData.swift */; };
 		BD1D19FB24859C53002096E1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1D19FA24859C53002096E1 /* List.swift */; };
+		89E4C139248052A80036ABDF /* ConnectionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C138248052A80036ABDF /* ConnectionCheck.swift */; };
+		89E4C13D2480565F0036ABDF /* localData.json in Resources */ = {isa = PBXBuildFile; fileRef = 89E4C13C2480565F0036ABDF /* localData.json */; };
 		BD3049ED2477690400346FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EC2477690400346FE5 /* AppDelegate.swift */; };
 		BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3049EE2477690400346FE5 /* SceneDelegate.swift */; };
 		BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3049F02477690400346FE5 /* Covid_19_Status.xcdatamodeld */; };
@@ -75,6 +77,8 @@
 		BD1D19F6248172DB002096E1 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		BD1D19F824817E52002096E1 /* SelectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionData.swift; sourceTree = "<group>"; };
 		BD1D19FA24859C53002096E1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		89E4C138248052A80036ABDF /* ConnectionCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheck.swift; sourceTree = "<group>"; };
+		89E4C13C2480565F0036ABDF /* localData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = localData.json; sourceTree = "<group>"; };
 		BD3049E92477690400346FE5 /* Covid-19-Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19-Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3049EC2477690400346FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD3049EE2477690400346FE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				890EECE32479024C00CC0DBC /* Data.swift */,
+				89E4C13C2480565F0036ABDF /* localData.json */,
 				89E4C12E247D96EB0036ABDF /* AppData.swift */,
 				89E4C130247EEB290036ABDF /* Structs.swift */,
 				BD1D19EE247DB227002096E1 /* Refuses.swift */,
@@ -199,6 +204,7 @@
 				BD3049EE2477690400346FE5 /* SceneDelegate.swift */,
 				BD304A1F24784DAC00346FE5 /* Response.swift */,
 				8986B59A2479A7A300DA98FE /* Color.swift */,
+				89E4C138248052A80036ABDF /* ConnectionCheck.swift */,
 				BD3049F52477690A00346FE5 /* Assets.xcassets */,
 				890EECDF2478FF2300CC0DBC /* Model */,
 				89092F982478575900A58C1F /* Views */,
@@ -344,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3049FC2477690A00346FE5 /* LaunchScreen.storyboard in Resources */,
+				89E4C13D2480565F0036ABDF /* localData.json in Resources */,
 				BD3049F92477690A00346FE5 /* Preview Assets.xcassets in Resources */,
 				BD3049F62477690A00346FE5 /* Assets.xcassets in Resources */,
 				890EECE22478FFD700CC0DBC /* tipsData.json in Resources */,
@@ -387,6 +394,7 @@
 				89E4C131247EEB290036ABDF /* Structs.swift in Sources */,
 				BD3049F42477690400346FE5 /* ContentView.swift in Sources */,
 				89092F9A2478578100A58C1F /* HomeView.swift in Sources */,
+				89E4C139248052A80036ABDF /* ConnectionCheck.swift in Sources */,
 				BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */,
 				BD1D19F1247EDB37002096E1 /* Cases.swift in Sources */,
 				BD1D19F3247EFDFC002096E1 /* Obitos.swift in Sources */,
