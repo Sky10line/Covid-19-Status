@@ -11,26 +11,67 @@
 
 import SwiftUI
 
-class ChangeValues: ObservableObject {
-    @Published var isPresented = false
-    @Published var score2 = 7
-    @Published var value = 10
-}
-
 struct ContentView: View {
-    @ObservedObject var vm: ChangeValues = ChangeValues()
-    
-    var idState: String
-    
+    @State var isPresented = false
+    @State var idState: String
+    @State private var selectedStateIndex = 0
     var body: some View {
-        let states = DataService.getState(idState)
-        print(DataService.getAllStates().data)
+        
+        let state = DataService.getState(idState)!
+        let allStates = DataService.getAllStates().data
+        
+        
         return ZStack {
             NavigationView {
                 VStack {
-                    Text("Consertando")
+                    VStack {
+                        Button(action: {
+                            withAnimation{
+                                self.isPresented.toggle()
+                            }
+                        }, label: {
+                            Text(allStates[self.selectedStateIndex].state)
+                                .font(.title)
+                        }).offset(x: -110,y: -100)
+                        
+                        Recovered(recovereds: state.refuses).offset(y:-80)
+                        
+                        Cases(cases: state.cases, suspects: state.suspects).offset(y: -60)
+                        //
+                        Obitos(deaths: state.deaths).offset(y:-40)
+                    }.offset(y:-50)
+                    
+                    
                 }.navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             }
+            ZStack{
+                HStack{
+                    Spacer()
+                    VStack(alignment: .center, spacing: 18, content: {
+                        Picker(selection: $selectedStateIndex, label: Text("")) {
+                            ForEach(0 ..< allStates.count) {
+                                Text(allStates[$0].state)
+                            }
+                        }
+                        Button(action: {
+                            self.idState = allStates[self.selectedStateIndex].uf
+                            withAnimation{
+                                self.isPresented.toggle()
+                            }
+                            print(String(self.isPresented))
+                        }, label: {
+                            Text("Confimar").frame(width: 100.0, height: 3.0).padding()
+                                .background(Color.white).cornerRadius(10.0).foregroundColor(Color.black)
+                        }).offset(x: 5)
+                    
+                    }).frame(width: 287).padding(EdgeInsets(top: 0, leading: 26, bottom: 60, trailing: 34))
+                        .background(Color.gray)
+                        .cornerRadius(10.0).shadow(radius: 50.0)
+                        
+                        
+                   Spacer()
+                }
+            }.offset(x:0, y: isPresented ? 0: UIApplication.shared.keyWindow?.frame.height ?? 0)
         }
     }
 }
