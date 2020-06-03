@@ -22,6 +22,7 @@ struct  CellDataRec: View {
     
     var bgColor: Color = Color.secondary
     let size: (w: CGFloat, h:CGFloat) = (w: 320, h: 120)
+    let brazil = DataService.getCountry("brazil")!
     
     var body: some View {
         ZStack (alignment: .leading) {
@@ -29,15 +30,17 @@ struct  CellDataRec: View {
                 VStack (alignment: .leading){
                     VStack {
                         VStack(alignment: .leading) {
-                            Text("100.000").font(.title)
+                            Text("\(brazil.data.recovered)").font(.title)
                             Text("Casos recuperados").font(.subheadline)
                         }
                         .padding(.top)
                         VStack(alignment: .leading) {
-                            Text("100.00").font(.title)
+                            Text("\(brazil.data.cases)").font(.title)
                             Text("Em acompanhamento").font(.subheadline)
                         }
                         .padding(.top)
+                        Text("data: \(brazil.data.updated_at)").font(.caption)
+                            .padding(.top)
                     }
                 }
                 Spacer()
@@ -47,6 +50,10 @@ struct  CellDataRec: View {
             .frame(width: size.w)
             .background(bgColor)
             .cornerRadius(25)
+    }
+    
+    init() {
+        
     }
 }
 
