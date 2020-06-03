@@ -78,16 +78,14 @@ struct HomeTipsRow: View {
     let tips: [Tip]
     let index: Int
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    var cellColor: Color = Color.secondary
-    var cellForegroundColor: Color = Color.black
     
     var body: some View {
         HStack {
             Spacer()
-            CellTips(tip: tips[index], cellcColor: cellColor,foregroundColor: cellForegroundColor)
+            CellTips(tip: tips[index])
             Spacer()
             if index + 1 < tips.count {
-                CellTips(tip: tips[index + 1], cellcColor: cellColor, foregroundColor: cellForegroundColor)
+                CellTips(tip: tips[index + 1])
             }else{
                 Text("").frame(width: size.w, height: size.h)
                     .background(Color.clear)
@@ -102,18 +100,17 @@ struct CellTips: View {
     
     let tip: Tip
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    var cellcColor: Color = Color.secondary
-    let foregroundColor: Color
+    let color = Color.secondary
     var body: some View {
-        NavigationLink(destination: TipView(tip: tip)){
+        NavigationLink(destination: TipsView(tip: tip)){
             ZStack(alignment: .bottom){
                 Text("").frame(width: size.w, height: size.h)
-                    .background(cellcColor)
+                    .background(color)
                     .cornerRadius(25)
                 
                 Text(tip.title).frame(width: 120)
                     .font(.headline)
-                    .foregroundColor(foregroundColor)
+                    .foregroundColor(Color.black)
                     .offset(y: -16)
             }
         }
