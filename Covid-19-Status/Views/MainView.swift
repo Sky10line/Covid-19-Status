@@ -21,7 +21,7 @@ struct MainView: View {
                 Text("Home")
             }.tag(0)
             
-            ContentView().tabItem {
+            TipsMainView().tabItem {
                 Text("Dicas")
             }.tag(1)
             
