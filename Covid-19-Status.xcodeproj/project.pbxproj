@@ -310,7 +310,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Rodrigo-Rogerio";
 				TargetAttributes = {
 					BD3049E82477690400346FE5 = {
@@ -394,9 +394,8 @@
 				BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */,
 				89E4C12D247C55E30036ABDF /* HomeDataOverView.swift in Sources */,
 				89E4C133247EEBED0036ABDF /* DataService.swift in Sources */,
-				890EECDC24787FF000CC0DBC /* TipsView.swift in Sources */,
-				89E4C131247EEB290036ABDF /* Structs.swift in Sources */,
 				890EECDC24787FF000CC0DBC /* TipView.swift in Sources */,
+				89E4C131247EEB290036ABDF /* Structs.swift in Sources */,
 				BD3049F42477690400346FE5 /* ContentView.swift in Sources */,
 				BDD22DD42486E69A00EC2F27 /* SelectionData.swift in Sources */,
 				89092F9A2478578100A58C1F /* HomeView.swift in Sources */,
