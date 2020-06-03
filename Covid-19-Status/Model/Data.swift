@@ -13,10 +13,8 @@ var tipsData: [Tip] = load("tipsData.json")
 
 struct Tip: Hashable, Codable, Identifiable {
     let id: Int
-    let imgName: String
     let title: String
     let text: String
-    let source: String
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
