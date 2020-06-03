@@ -1,0 +1,1782 @@
+{
+    "lastUpdate" : "2020-05-28 21:29:46 +0000",
+        "countries": [
+            {
+                "country": "Australia",
+                "cases": 474,
+                "confirmed": 7157,
+                "deaths": 103,
+                "recovered": 6580,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Austria",
+                "cases": 674,
+                "confirmed": 16628,
+                "deaths": 668,
+                "recovered": 15286,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Canada",
+                "cases": 36058,
+                "confirmed": 89918,
+                "deaths": 6978,
+                "recovered": 46882,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "China",
+                "cases": 97,
+                "confirmed": 84106,
+                "deaths": 4638,
+                "recovered": 79371,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Denmark",
+                "cases": 766,
+                "confirmed": 11712,
+                "deaths": 568,
+                "recovered": 10378,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Finland",
+                "cases": 930,
+                "confirmed": 6743,
+                "deaths": 313,
+                "recovered": 5500,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "France",
+                "cases": 90390,
+                "confirmed": 186364,
+                "deaths": 28665,
+                "recovered": 67309,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Germany",
+                "cases": 10366,
+                "confirmed": 182196,
+                "deaths": 8470,
+                "recovered": 163360,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Iceland",
+                "cases": 3,
+                "confirmed": 1805,
+                "deaths": 10,
+                "recovered": 1792,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Ireland",
+                "cases": 1113,
+                "confirmed": 24841,
+                "deaths": 1639,
+                "recovered": 22089,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Italy",
+                "cases": 47986,
+                "confirmed": 231732,
+                "deaths": 33142,
+                "recovered": 150604,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Netherlands",
+                "cases": 40053,
+                "confirmed": 46152,
+                "deaths": 5922,
+                "recovered": 177,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Norway",
+                "cases": 443,
+                "confirmed": 8406,
+                "deaths": 236,
+                "recovered": 7727,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Russia",
+                "cases": 223916,
+                "confirmed": 379051,
+                "deaths": 4142,
+                "recovered": 150993,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Sweden",
+                "cases": 26490,
+                "confirmed": 35727,
+                "deaths": 4266,
+                "recovered": 4971,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Switzerland",
+                "cases": 577,
+                "confirmed": 30796,
+                "deaths": 1919,
+                "recovered": 28300,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "United Kingdom",
+                "cases": 231422,
+                "confirmed": 270507,
+                "deaths": 37919,
+                "recovered": 1166,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "US",
+                "cases": 1245745,
+                "confirmed": 1715811,
+                "deaths": 101337,
+                "recovered": 391508,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Spain",
+                "cases": 60411,
+                "confirmed": 237906,
+                "deaths": 27119,
+                "recovered": 150376,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Mexico",
+                "cases": 15592,
+                "confirmed": 78023,
+                "deaths": 8597,
+                "recovered": 53834,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Chile",
+                "cases": 49938,
+                "confirmed": 86943,
+                "deaths": 890,
+                "recovered": 36115,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Brazil",
+                "cases": 219576,
+                "confirmed": 411821,
+                "deaths": 25598,
+                "recovered": 166647,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Peru",
+                "cases": 75753,
+                "confirmed": 135905,
+                "deaths": 3983,
+                "recovered": 56169,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Colombia",
+                "cases": 17176,
+                "confirmed": 24141,
+                "deaths": 833,
+                "recovered": 6132,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Japan",
+                "cases": 1621,
+                "confirmed": 16598,
+                "deaths": 881,
+                "recovered": 14096,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Afghanistan",
+                "cases": 11592,
+                "confirmed": 13036,
+                "deaths": 235,
+                "recovered": 1209,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Albania",
+                "cases": 220,
+                "confirmed": 1076,
+                "deaths": 33,
+                "recovered": 823,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Algeria",
+                "cases": 3090,
+                "confirmed": 8997,
+                "deaths": 630,
+                "recovered": 5277,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Andorra",
+                "cases": 31,
+                "confirmed": 763,
+                "deaths": 51,
+                "recovered": 681,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Angola",
+                "cases": 52,
+                "confirmed": 74,
+                "deaths": 4,
+                "recovered": 18,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Antigua and Barbuda",
+                "cases": 3,
+                "confirmed": 25,
+                "deaths": 3,
+                "recovered": 19,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Argentina",
+                "cases": 8815,
+                "confirmed": 13933,
+                "deaths": 501,
+                "recovered": 4617,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Armenia",
+                "cases": 4816,
+                "confirmed": 8216,
+                "deaths": 113,
+                "recovered": 3287,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Azerbaijan",
+                "cases": 1681,
+                "confirmed": 4759,
+                "deaths": 56,
+                "recovered": 3022,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bahamas",
+                "cases": 43,
+                "confirmed": 100,
+                "deaths": 11,
+                "recovered": 46,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bahrain",
+                "cases": 4618,
+                "confirmed": 10052,
+                "deaths": 15,
+                "recovered": 5419,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bangladesh",
+                "cases": 31337,
+                "confirmed": 40321,
+                "deaths": 559,
+                "recovered": 8425,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Barbados",
+                "cases": 9,
+                "confirmed": 92,
+                "deaths": 7,
+                "recovered": 76,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Belarus",
+                "cases": 22979,
+                "confirmed": 39858,
+                "deaths": 219,
+                "recovered": 16660,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Belgium",
+                "cases": 32889,
+                "confirmed": 57849,
+                "deaths": 9388,
+                "recovered": 15572,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Belize",
+                "cases": 0,
+                "confirmed": 18,
+                "deaths": 2,
+                "recovered": 16,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Benin",
+                "cases": 73,
+                "confirmed": 210,
+                "deaths": 3,
+                "recovered": 134,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bhutan",
+                "cases": 25,
+                "confirmed": 31,
+                "deaths": 0,
+                "recovered": 6,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bolivia",
+                "cases": 6799,
+                "confirmed": 7768,
+                "deaths": 280,
+                "recovered": 689,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bosnia and Herzegovina",
+                "cases": 528,
+                "confirmed": 2462,
+                "deaths": 153,
+                "recovered": 1781,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Botswana",
+                "cases": 14,
+                "confirmed": 35,
+                "deaths": 1,
+                "recovered": 20,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Brunei",
+                "cases": 1,
+                "confirmed": 141,
+                "deaths": 2,
+                "recovered": 138,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Bulgaria",
+                "cases": 1378,
+                "confirmed": 2477,
+                "deaths": 134,
+                "recovered": 965,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Burkina Faso",
+                "cases": 75,
+                "confirmed": 847,
+                "deaths": 53,
+                "recovered": 719,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Burma",
+                "cases": 74,
+                "confirmed": 206,
+                "deaths": 6,
+                "recovered": 126,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Burundi",
+                "cases": 21,
+                "confirmed": 42,
+                "deaths": 1,
+                "recovered": 20,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Cabo Verde",
+                "cases": 231,
+                "confirmed": 390,
+                "deaths": 4,
+                "recovered": 155,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Cambodia",
+                "cases": 2,
+                "confirmed": 124,
+                "deaths": 0,
+                "recovered": 122,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Cameroon",
+                "cases": 3265,
+                "confirmed": 5436,
+                "deaths": 175,
+                "recovered": 1996,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Central African Republic",
+                "cases": 678,
+                "confirmed": 702,
+                "deaths": 1,
+                "recovered": 23,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Chad",
+                "cases": 248,
+                "confirmed": 726,
+                "deaths": 65,
+                "recovered": 413,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Comoros",
+                "cases": 61,
+                "confirmed": 87,
+                "deaths": 2,
+                "recovered": 24,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Congo (Brazzaville)",
+                "cases": 391,
+                "confirmed": 571,
+                "deaths": 19,
+                "recovered": 161,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Congo (Kinshasa)",
+                "cases": 2210,
+                "confirmed": 2660,
+                "deaths": 69,
+                "recovered": 381,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Costa Rica",
+                "cases": 344,
+                "confirmed": 1000,
+                "deaths": 10,
+                "recovered": 646,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Cote d'Ivoire",
+                "cases": 1283,
+                "confirmed": 2641,
+                "deaths": 32,
+                "recovered": 1326,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Croatia",
+                "cases": 92,
+                "confirmed": 2245,
+                "deaths": 102,
+                "recovered": 2051,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Cuba",
+                "cases": 167,
+                "confirmed": 1983,
+                "deaths": 82,
+                "recovered": 1734,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Cyprus",
+                "cases": 140,
+                "confirmed": 941,
+                "deaths": 17,
+                "recovered": 784,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Czechia",
+                "cases": 2359,
+                "confirmed": 9134,
+                "deaths": 318,
+                "recovered": 6457,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Diamond Princess",
+                "cases": 48,
+                "confirmed": 712,
+                "deaths": 13,
+                "recovered": 651,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Djibouti",
+                "cases": 1653,
+                "confirmed": 2914,
+                "deaths": 20,
+                "recovered": 1241,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Dominica",
+                "cases": 0,
+                "confirmed": 16,
+                "deaths": 0,
+                "recovered": 16,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Dominican Republic",
+                "cases": 6631,
+                "confirmed": 16068,
+                "deaths": 485,
+                "recovered": 8952,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Ecuador",
+                "cases": 16733,
+                "confirmed": 38471,
+                "deaths": 3313,
+                "recovered": 18425,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Egypt",
+                "cases": 14589,
+                "confirmed": 20793,
+                "deaths": 845,
+                "recovered": 5359,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "El Salvador",
+                "cases": 1153,
+                "confirmed": 2194,
+                "deaths": 39,
+                "recovered": 1002,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Equatorial Guinea",
+                "cases": 866,
+                "confirmed": 1043,
+                "deaths": 12,
+                "recovered": 165,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Eritrea",
+                "cases": 0,
+                "confirmed": 39,
+                "deaths": 0,
+                "recovered": 39,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Estonia",
+                "cases": 211,
+                "confirmed": 1851,
+                "deaths": 66,
+                "recovered": 1574,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Eswatini",
+                "cases": 109,
+                "confirmed": 279,
+                "deaths": 2,
+                "recovered": 168,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Ethiopia",
+                "cases": 633,
+                "confirmed": 831,
+                "deaths": 7,
+                "recovered": 191,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Fiji",
+                "cases": 3,
+                "confirmed": 18,
+                "deaths": 0,
+                "recovered": 15,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Gabon",
+                "cases": 1674,
+                "confirmed": 2319,
+                "deaths": 14,
+                "recovered": 631,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Gambia",
+                "cases": 5,
+                "confirmed": 25,
+                "deaths": 1,
+                "recovered": 19,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Georgia",
+                "cases": 153,
+                "confirmed": 738,
+                "deaths": 12,
+                "recovered": 573,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Ghana",
+                "cases": 4857,
+                "confirmed": 7303,
+                "deaths": 34,
+                "recovered": 2412,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Greece",
+                "cases": 1357,
+                "confirmed": 2906,
+                "deaths": 175,
+                "recovered": 1374,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Grenada",
+                "cases": 5,
+                "confirmed": 23,
+                "deaths": 0,
+                "recovered": 18,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Guatemala",
+                "cases": 3584,
+                "confirmed": 4145,
+                "deaths": 68,
+                "recovered": 493,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Guinea",
+                "cases": 1581,
+                "confirmed": 3553,
+                "deaths": 22,
+                "recovered": 1950,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Guinea-Bissau",
+                "cases": 1145,
+                "confirmed": 1195,
+                "deaths": 8,
+                "recovered": 42,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Guyana",
+                "cases": 61,
+                "confirmed": 139,
+                "deaths": 11,
+                "recovered": 67,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Haiti",
+                "cases": 1264,
+                "confirmed": 1320,
+                "deaths": 34,
+                "recovered": 22,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Holy See",
+                "cases": 10,
+                "confirmed": 12,
+                "deaths": 0,
+                "recovered": 2,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Honduras",
+                "cases": 3940,
+                "confirmed": 4640,
+                "deaths": 194,
+                "recovered": 506,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Hungary",
+                "cases": 1311,
+                "confirmed": 3816,
+                "deaths": 509,
+                "recovered": 1996,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "India",
+                "cases": 89755,
+                "confirmed": 165386,
+                "deaths": 4711,
+                "recovered": 70920,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Indonesia",
+                "cases": 16802,
+                "confirmed": 24538,
+                "deaths": 1496,
+                "recovered": 6240,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Iran",
+                "cases": 23234,
+                "confirmed": 143849,
+                "deaths": 7627,
+                "recovered": 112988,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Iraq",
+                "cases": 2307,
+                "confirmed": 5457,
+                "deaths": 179,
+                "recovered": 2971,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Israel",
+                "cases": 1909,
+                "confirmed": 16872,
+                "deaths": 284,
+                "recovered": 14679,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Jamaica",
+                "cases": 281,
+                "confirmed": 569,
+                "deaths": 9,
+                "recovered": 279,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Jordan",
+                "cases": 222,
+                "confirmed": 728,
+                "deaths": 9,
+                "recovered": 497,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Kazakhstan",
+                "cases": 4639,
+                "confirmed": 9576,
+                "deaths": 37,
+                "recovered": 4900,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Kenya",
+                "cases": 1139,
+                "confirmed": 1618,
+                "deaths": 58,
+                "recovered": 421,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Korea, South",
+                "cases": 735,
+                "confirmed": 11344,
+                "deaths": 269,
+                "recovered": 10340,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Kosovo",
+                "cases": 217,
+                "confirmed": 1048,
+                "deaths": 30,
+                "recovered": 801,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Kuwait",
+                "cases": 15229,
+                "confirmed": 24112,
+                "deaths": 185,
+                "recovered": 8698,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Kyrgyzstan",
+                "cases": 512,
+                "confirmed": 1594,
+                "deaths": 16,
+                "recovered": 1066,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Laos",
+                "cases": 3,
+                "confirmed": 19,
+                "deaths": 0,
+                "recovered": 16,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Latvia",
+                "cases": 296,
+                "confirmed": 1061,
+                "deaths": 24,
+                "recovered": 741,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Lebanon",
+                "cases": 443,
+                "confirmed": 1168,
+                "deaths": 26,
+                "recovered": 699,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Lesotho",
+                "cases": 1,
+                "confirmed": 2,
+                "deaths": 0,
+                "recovered": 1,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Liberia",
+                "cases": 98,
+                "confirmed": 269,
+                "deaths": 27,
+                "recovered": 144,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Libya",
+                "cases": 55,
+                "confirmed": 99,
+                "deaths": 4,
+                "recovered": 40,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Liechtenstein",
+                "cases": 26,
+                "confirmed": 82,
+                "deaths": 1,
+                "recovered": 55,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Lithuania",
+                "cases": 395,
+                "confirmed": 1656,
+                "deaths": 68,
+                "recovered": 1193,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Luxembourg",
+                "cases": 95,
+                "confirmed": 4008,
+                "deaths": 110,
+                "recovered": 3803,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "MS Zaandam",
+                "cases": 7,
+                "confirmed": 9,
+                "deaths": 2,
+                "recovered": 0,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Madagascar",
+                "cases": 500,
+                "confirmed": 656,
+                "deaths": 2,
+                "recovered": 154,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Malawi",
+                "cases": 162,
+                "confirmed": 203,
+                "deaths": 4,
+                "recovered": 37,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Malaysia",
+                "cases": 1345,
+                "confirmed": 7629,
+                "deaths": 115,
+                "recovered": 6169,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Maldives",
+                "cases": 1311,
+                "confirmed": 1513,
+                "deaths": 5,
+                "recovered": 197,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Mali",
+                "cases": 470,
+                "confirmed": 1194,
+                "deaths": 72,
+                "recovered": 652,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Malta",
+                "cases": 108,
+                "confirmed": 616,
+                "deaths": 7,
+                "recovered": 501,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Mauritania",
+                "cases": 312,
+                "confirmed": 346,
+                "deaths": 19,
+                "recovered": 15,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Mauritius",
+                "cases": 2,
+                "confirmed": 334,
+                "deaths": 10,
+                "recovered": 322,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Moldova",
+                "cases": 3320,
+                "confirmed": 7725,
+                "deaths": 282,
+                "recovered": 4123,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Monaco",
+                "cases": 4,
+                "confirmed": 98,
+                "deaths": 4,
+                "recovered": 90,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Mongolia",
+                "cases": 118,
+                "confirmed": 161,
+                "deaths": 0,
+                "recovered": 43,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Montenegro",
+                "cases": 0,
+                "confirmed": 324,
+                "deaths": 9,
+                "recovered": 315,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Morocco",
+                "cases": 2246,
+                "confirmed": 7643,
+                "deaths": 202,
+                "recovered": 5195,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Mozambique",
+                "cases": 149,
+                "confirmed": 233,
+                "deaths": 2,
+                "recovered": 82,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Namibia",
+                "cases": 8,
+                "confirmed": 22,
+                "deaths": 0,
+                "recovered": 14,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Nepal",
+                "cases": 850,
+                "confirmed": 1042,
+                "deaths": 5,
+                "recovered": 187,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "New Zealand",
+                "cases": 8,
+                "confirmed": 1504,
+                "deaths": 22,
+                "recovered": 1474,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Nicaragua",
+                "cases": 354,
+                "confirmed": 759,
+                "deaths": 35,
+                "recovered": 370,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Niger",
+                "cases": 88,
+                "confirmed": 955,
+                "deaths": 64,
+                "recovered": 803,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Nigeria",
+                "cases": 5978,
+                "confirmed": 8733,
+                "deaths": 254,
+                "recovered": 2501,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "North Macedonia",
+                "cases": 470,
+                "confirmed": 2077,
+                "deaths": 121,
+                "recovered": 1486,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Oman",
+                "cases": 6792,
+                "confirmed": 9009,
+                "deaths": 40,
+                "recovered": 2177,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Pakistan",
+                "cases": 39736,
+                "confirmed": 61227,
+                "deaths": 1260,
+                "recovered": 20231,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Panama",
+                "cases": 4034,
+                "confirmed": 11728,
+                "deaths": 315,
+                "recovered": 7379,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Papua New Guinea",
+                "cases": 0,
+                "confirmed": 8,
+                "deaths": 0,
+                "recovered": 8,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Paraguay",
+                "cases": 487,
+                "confirmed": 900,
+                "deaths": 11,
+                "recovered": 402,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Philippines",
+                "cases": 11069,
+                "confirmed": 15588,
+                "deaths": 921,
+                "recovered": 3598,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Poland",
+                "cases": 11227,
+                "confirmed": 22825,
+                "deaths": 1038,
+                "recovered": 10560,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Portugal",
+                "cases": 11590,
+                "confirmed": 31596,
+                "deaths": 1369,
+                "recovered": 18637,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Qatar",
+                "cases": 35482,
+                "confirmed": 50914,
+                "deaths": 33,
+                "recovered": 15399,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Romania",
+                "cases": 4927,
+                "confirmed": 18791,
+                "deaths": 1235,
+                "recovered": 12629,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Rwanda",
+                "cases": 104,
+                "confirmed": 349,
+                "deaths": 0,
+                "recovered": 245,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Saint Kitts and Nevis",
+                "cases": 0,
+                "confirmed": 15,
+                "deaths": 0,
+                "recovered": 15,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Saint Lucia",
+                "cases": 0,
+                "confirmed": 18,
+                "deaths": 0,
+                "recovered": 18,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Saint Vincent and the Grenadines",
+                "cases": 11,
+                "confirmed": 25,
+                "deaths": 0,
+                "recovered": 14,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "San Marino",
+                "cases": 306,
+                "confirmed": 670,
+                "deaths": 42,
+                "recovered": 322,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Sao Tome and Principe",
+                "cases": 378,
+                "confirmed": 458,
+                "deaths": 12,
+                "recovered": 68,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Saudi Arabia",
+                "cases": 25191,
+                "confirmed": 80185,
+                "deaths": 441,
+                "recovered": 54553,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Senegal",
+                "cases": 1623,
+                "confirmed": 3348,
+                "deaths": 39,
+                "recovered": 1686,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Serbia",
+                "cases": 4621,
+                "confirmed": 11300,
+                "deaths": 241,
+                "recovered": 6438,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Seychelles",
+                "cases": 0,
+                "confirmed": 11,
+                "deaths": 0,
+                "recovered": 11,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Sierra Leone",
+                "cases": 406,
+                "confirmed": 812,
+                "deaths": 45,
+                "recovered": 361,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Singapore",
+                "cases": 14932,
+                "confirmed": 33249,
+                "deaths": 23,
+                "recovered": 18294,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Slovakia",
+                "cases": 160,
+                "confirmed": 1520,
+                "deaths": 28,
+                "recovered": 1332,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Slovenia",
+                "cases": 9,
+                "confirmed": 1473,
+                "deaths": 108,
+                "recovered": 1356,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Somalia",
+                "cases": 1446,
+                "confirmed": 1828,
+                "deaths": 72,
+                "recovered": 310,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "South Africa",
+                "cases": 11934,
+                "confirmed": 25937,
+                "deaths": 552,
+                "recovered": 13451,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "South Sudan",
+                "cases": 978,
+                "confirmed": 994,
+                "deaths": 10,
+                "recovered": 6,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Sri Lanka",
+                "cases": 775,
+                "confirmed": 1530,
+                "deaths": 10,
+                "recovered": 745,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Sudan",
+                "cases": 3402,
+                "confirmed": 4346,
+                "deaths": 195,
+                "recovered": 749,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Suriname",
+                "cases": 2,
+                "confirmed": 12,
+                "deaths": 1,
+                "recovered": 9,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Syria",
+                "cases": 75,
+                "confirmed": 122,
+                "deaths": 4,
+                "recovered": 43,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Taiwan*",
+                "cases": 14,
+                "confirmed": 441,
+                "deaths": 7,
+                "recovered": 420,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Tajikistan",
+                "cases": 1842,
+                "confirmed": 3563,
+                "deaths": 47,
+                "recovered": 1674,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Tanzania",
+                "cases": 305,
+                "confirmed": 509,
+                "deaths": 21,
+                "recovered": 183,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Thailand",
+                "cases": 63,
+                "confirmed": 3065,
+                "deaths": 57,
+                "recovered": 2945,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Timor-Leste",
+                "cases": 0,
+                "confirmed": 24,
+                "deaths": 0,
+                "recovered": 24,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Togo",
+                "cases": 212,
+                "confirmed": 422,
+                "deaths": 13,
+                "recovered": 197,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Trinidad and Tobago",
+                "cases": 0,
+                "confirmed": 116,
+                "deaths": 8,
+                "recovered": 108,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Tunisia",
+                "cases": 82,
+                "confirmed": 1068,
+                "deaths": 48,
+                "recovered": 938,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Turkey",
+                "cases": 32149,
+                "confirmed": 160979,
+                "deaths": 4461,
+                "recovered": 124369,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Uganda",
+                "cases": 212,
+                "confirmed": 281,
+                "deaths": 0,
+                "recovered": 69,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Ukraine",
+                "cases": 13274,
+                "confirmed": 22382,
+                "deaths": 669,
+                "recovered": 8439,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "United Arab Emirates",
+                "cases": 15589,
+                "confirmed": 32532,
+                "deaths": 258,
+                "recovered": 16685,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Uruguay",
+                "cases": 131,
+                "confirmed": 803,
+                "deaths": 22,
+                "recovered": 650,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Uzbekistan",
+                "cases": 736,
+                "confirmed": 3444,
+                "deaths": 14,
+                "recovered": 2694,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Venezuela",
+                "cases": 932,
+                "confirmed": 1245,
+                "deaths": 11,
+                "recovered": 302,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Vietnam",
+                "cases": 49,
+                "confirmed": 327,
+                "deaths": 0,
+                "recovered": 278,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "West Bank and Gaza",
+                "cases": 75,
+                "confirmed": 446,
+                "deaths": 3,
+                "recovered": 368,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Western Sahara",
+                "cases": 2,
+                "confirmed": 9,
+                "deaths": 1,
+                "recovered": 6,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Yemen",
+                "cases": 210,
+                "confirmed": 278,
+                "deaths": 57,
+                "recovered": 11,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Zambia",
+                "cases": 271,
+                "confirmed": 1057,
+                "deaths": 7,
+                "recovered": 779,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            },
+            {
+                "country": "Zimbabwe",
+                "cases": 103,
+                "confirmed": 132,
+                "deaths": 4,
+                "recovered": 25,
+                "updated_at": "2020-05-28T20:37:00.000Z"
+            }
+        ],
+    "states": [
+        {
+            "uid": 35,
+            "uf": "SP",
+            "state": "São Paulo",
+            "cases": 89483,
+            "deaths": 6712,
+            "suspects": 5334,
+            "refuses": 596,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 33,
+            "uf": "RJ",
+            "state": "Rio de Janeiro",
+            "cases": 42398,
+            "deaths": 4605,
+            "suspects": 1254,
+            "refuses": 148,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 23,
+            "uf": "CE",
+            "state": "Ceará",
+            "cases": 37275,
+            "deaths": 2671,
+            "suspects": 493,
+            "refuses": 89,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 13,
+            "uf": "AM",
+            "state": "Amazonas",
+            "cases": 33508,
+            "deaths": 1891,
+            "suspects": 18,
+            "refuses": 26,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 15,
+            "uf": "PA",
+            "state": "Pará",
+            "cases": 31033,
+            "deaths": 2545,
+            "suspects": 43,
+            "refuses": 23,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 26,
+            "uf": "PE",
+            "state": "Pernambuco",
+            "cases": 29919,
+            "deaths": 2468,
+            "suspects": 89,
+            "refuses": 23,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 21,
+            "uf": "MA",
+            "state": "Maranhão",
+            "cases": 26145,
+            "deaths": 853,
+            "suspects": 125,
+            "refuses": 13,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 29,
+            "uf": "BA",
+            "state": "Bahia",
+            "cases": 15070,
+            "deaths": 531,
+            "suspects": 573,
+            "refuses": 36,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 32,
+            "uf": "ES",
+            "state": "Espírito Santo",
+            "cases": 11484,
+            "deaths": 511,
+            "suspects": 71,
+            "refuses": 21,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 25,
+            "uf": "PB",
+            "state": "Paraíba",
+            "cases": 10209,
+            "deaths": 298,
+            "suspects": 85,
+            "refuses": 11,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 31,
+            "uf": "MG",
+            "state": "Minas Gerais",
+            "cases": 8011,
+            "deaths": 240,
+            "suspects": 925,
+            "refuses": 104,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 53,
+            "uf": "DF",
+            "state": "Distrito Federal",
+            "cases": 7761,
+            "deaths": 133,
+            "suspects": 327,
+            "refuses": 107,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 16,
+            "uf": "AP",
+            "state": "Amapá",
+            "cases": 7619,
+            "deaths": 183,
+            "suspects": 15,
+            "refuses": 0,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 27,
+            "uf": "AL",
+            "state": "Alagoas",
+            "cases": 7580,
+            "deaths": 368,
+            "suspects": 43,
+            "refuses": 22,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 42,
+            "uf": "SC",
+            "state": "Santa Catarina",
+            "cases": 7372,
+            "deaths": 126,
+            "suspects": 346,
+            "refuses": 47,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 43,
+            "uf": "RS",
+            "state": "Rio Grande do Sul",
+            "cases": 7048,
+            "deaths": 209,
+            "suspects": 416,
+            "refuses": 330,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 28,
+            "uf": "SE",
+            "state": "Sergipe",
+            "cases": 5912,
+            "deaths": 127,
+            "suspects": 15,
+            "refuses": 11,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 24,
+            "uf": "RN",
+            "state": "Rio Grande do Norte",
+            "cases": 5630,
+            "deaths": 242,
+            "suspects": 108,
+            "refuses": 22,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 12,
+            "uf": "AC",
+            "state": "Acre",
+            "cases": 5251,
+            "deaths": 113,
+            "suspects": 12,
+            "refuses": 0,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 22,
+            "uf": "PI",
+            "state": "Piauí",
+            "cases": 3966,
+            "deaths": 134,
+            "suspects": 12,
+            "refuses": 2,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 11,
+            "uf": "RO",
+            "state": "Rondônia",
+            "cases": 3862,
+            "deaths": 137,
+            "suspects": 61,
+            "refuses": 2,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 41,
+            "uf": "PR",
+            "state": "Paraná",
+            "cases": 3712,
+            "deaths": 162,
+            "suspects": 400,
+            "refuses": 119,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 17,
+            "uf": "TO",
+            "state": "Tocantins",
+            "cases": 3023,
+            "deaths": 65,
+            "suspects": 13,
+            "refuses": 0,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 52,
+            "uf": "GO",
+            "state": "Goiás",
+            "cases": 2843,
+            "deaths": 108,
+            "suspects": 353,
+            "refuses": 55,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 14,
+            "uf": "RR",
+            "state": "Roraima",
+            "cases": 2682,
+            "deaths": 102,
+            "suspects": 9,
+            "refuses": 0,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 51,
+            "uf": "MT",
+            "state": "Mato Grosso",
+            "cases": 1839,
+            "deaths": 46,
+            "suspects": 45,
+            "refuses": 8,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        },
+        {
+            "uid": 50,
+            "uf": "MS",
+            "state": "Mato Grosso do Sul",
+            "cases": 1186,
+            "deaths": 18,
+            "suspects": 93,
+            "refuses": 26,
+            "datetime": "2020-05-27T22:33:44.576Z"
+        }
+    ]
+    
+}

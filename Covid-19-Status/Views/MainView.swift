@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State private var selection = 0
+//    @State private var selection = 0
     @EnvironmentObject var appData: AppData
     
     var color = Color.primary
@@ -20,7 +20,6 @@ struct MainView: View {
                 .tabItem {
                 Text("Home")
             }.tag(0)
-            
             TipsMainView().tabItem {
                 Text("Dicas")
             }.tag(1)
@@ -28,7 +27,7 @@ struct MainView: View {
             Button(action: {
                 
             }){
-                Text("Teste")
+                ContentView(idState: "sp")
                 }.tabItem{
                     Text("Dados")
                 }.tag(2)
