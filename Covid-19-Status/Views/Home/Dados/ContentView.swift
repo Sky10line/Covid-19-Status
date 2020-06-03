@@ -25,7 +25,14 @@ struct ContentView: View {
         return ZStack {
             NavigationView {
                 VStack {
-                    Button(action: {
+                    VStack {
+                        Recovered(recovereds: state.refuses).offset(y:-80)
+                        
+                        Cases(cases: state.cases, suspects: state.suspects).offset(y: -60)
+                        //
+                        Obitos(deaths: state.deaths).offset(y:-40)
+                    }.offset(y:-50)
+                   Button(action: {
                         self.backOpacity = 0.3
                         withAnimation{
                             self.isPresented.toggle()
@@ -34,16 +41,7 @@ struct ContentView: View {
                         Text(allStates[selectedStateIndex].state)
                             .font(.title)
                         Image(systemName: "chevron.right").offset(y: 2)
-                    }).offset(x:-110, y: -160)
-                    
-                    VStack {
-                        Recovered(recovereds: state.refuses).offset(y:-80)
-                        
-                        Cases(cases: state.cases, suspects: state.suspects).offset(y: -60)
-                        //
-                        Obitos(deaths: state.deaths).offset(y:-40)
-                    }.offset(y:-50)
-                    
+                    }).offset(x:-110)
                     
                 }.opacity(backOpacity).navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             }
