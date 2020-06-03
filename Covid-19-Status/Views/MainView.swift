@@ -20,8 +20,7 @@ struct MainView: View {
                 .tabItem {
                 Text("Home")
             }.tag(0)
-            
-            ContentView(idState: "sp").tabItem {
+            TipsMainView().tabItem {
                 Text("Dicas")
             }.tag(1)
             
