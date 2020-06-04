@@ -20,13 +20,11 @@ class ChartViewModel: ObservableObject {
 struct ChartBarView: View {
     
     @ObservedObject var viewModel = ChartViewModel()
-    let title: String = "Nome do grafico"
-    let xTitle: String = "Parametro x"
-    let yTitle: String = "Parametro y"
-    //     @State var selected: Int = 0
+    @State var title: String = "Nome do grafico"
+    @State var xTitle: String = "Parametro x"
+    @State var yTitle: String = "Parametro y"
     
     var body: some View {
-        
         
         ZStack {
             Color(.gray).edgesIgnoringSafeArea(.all)
@@ -75,12 +73,11 @@ struct ChartBarView: View {
         let spaces: CGFloat = 6 * listSize
         width -= spaces
         let elementSize = (width / listSize)
-        print("Tamanho da tela \(UIScreen.main.bounds.size.width)")
-        print("Tamanho da lista \(CGFloat(viewModel.list.count))")
-        print("Tela reduzida \(width)")
-        print("Tamanho do elemento\(elementSize)")
-        print("Tamanho Total Utilizado\(elementSize * listSize)")
-        
+//        print("Tamanho da tela \(UIScreen.main.bounds.size.width)")
+//        print("Tamanho da lista \(CGFloat(viewModel.list.count))")
+//        print("Tela reduzida \(width)")
+//        print("Tamanho do elemento\(elementSize)")
+//        print("Tamanho Total Utilizado\(elementSize * listSize)")
         return elementSize
         
     }

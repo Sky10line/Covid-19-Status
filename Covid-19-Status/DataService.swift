@@ -14,6 +14,7 @@ class DataService {
     private static let stateURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf"
     private static let brasilURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
     private static let allContriesURL = "https://covid19-brazil-api.now.sh/api/report/v1/countries"
+    private static let statesByDateURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
     
     private static let connectionCheck = ConnectionCheck()
     
@@ -56,6 +57,10 @@ class DataService {
             return request(url)
         }
         return Brazil(data: localData.states)
+    }
+    
+    static func getAllStatesByDate(_ date: String) -> Brazil{
+        return request("\(statesByDateURL)/\(date)")
     }
     
     static func getState(_ state: String) -> BrazilianState? {
