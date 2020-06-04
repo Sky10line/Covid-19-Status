@@ -40,6 +40,7 @@ struct ChartBarView: View {
     @State var title: String = "Nome do grafico"
     @State var xTitle: String = "Parametro x"
     @State var yTitle: String = "Parametro y"
+    var line: Bool = false
     
     var body: some View {
         
@@ -60,24 +61,7 @@ struct ChartBarView: View {
                                     .rotationEffect(Angle(degrees: 90))
                             }.frame(width: 0)
                             Spacer()
-                            if viewModel.list.count > 20{
-                                ScrollView(.horizontal) {
-                                    HStack(alignment: .bottom, spacing: 6) {
-                                        ForEach(viewModel.list, id: \.self) { i in
-                                            BarsChart(value: i, width: self.getBarWidth(), parentHeigth: 300, maxValue: self.viewModel.maxValue)
-                                        }
-                                    }
-                                }.frame(height: 300)
-                                .frame(maxWidth: 320)
-                            } else {
-                                HStack(alignment: .bottom, spacing: 6) {
-                                    ForEach(viewModel.list, id: \.self) { i in
-                                        BarsChart(value: i, width: self.getBarWidth(), parentHeigth: 300, maxValue: self.viewModel.maxValue)
-                                    }
-                                }
-                                .frame(height: 300)
-                                .frame(maxWidth: 320)
-                            }
+                            ChartBar(list: viewModel.list, maxValue: viewModel.maxValue)
                         }
                         Text(xTitle).padding()
                     }
@@ -98,9 +82,63 @@ struct ChartBarView: View {
         viewModel = ChartViewModel(list: list)
     }
     
-    func getBarWidth() -> CGFloat {
+    
+    
+}
+
+struct ChartBar:  View {
+    
+    let list: [CGFloat]
+    let maxValue: CGFloat
+    
+    var body: some View {
+        ZStack {
+            if list.count > 20 {
+                ScrollView(.horizontal) {
+                    HStack(alignment: .bottom, spacing: 6) {
+                        ForEach(0..<list.count, id: \.self) { i in
+                            VStack {
+                                BarsChart(value: self.list[i], width: self.getBarWidth(self.list), parentHeigth: 300, maxValue: self.maxValue)
+                                if i % 4 == 0 {
+                                Text("12/04").font(.caption)
+                                    .frame(width: 50, height: 30)
+                                    .rotationEffect(Angle(degrees: -45))
+                                    .padding(.top, 6)
+                                } else {
+                                    Text("12/04").font(.caption)
+                                    .frame(width: 50, height: 30)
+                                    .rotationEffect(Angle(degrees: -45))
+                                    .padding(.top, 6)
+                                        .foregroundColor(.clear)
+                                }
+                            }.frame(width: self.getBarWidth(self.list) + 4)
+                            
+                        }
+                    }
+                }.frame(height: 300)
+                    .frame(maxWidth: 320)
+            } else {
+                HStack(alignment: .bottom, spacing: 6) {
+                    ForEach(list.indices, id: \.self) { i in
+                        VStack {
+                            BarsChart(value: self.list[i], width: self.getBarWidth(self.list), parentHeigth: 300, maxValue: self.maxValue)
+                            
+                            Text("12/04").font(.caption)
+                                .frame(width: 50, height: 30)
+                                .rotationEffect(Angle(degrees: -45))
+                                .padding(.top, 6)
+                        }.frame(width: self.getBarWidth(self.list))
+                    }
+                }
+                .frame(height: 300)
+                .frame(maxWidth: 320)
+            }
+        }
+    }
+    
+    func getBarWidth(_ list: [Any]) -> CGFloat {
         var width: CGFloat = 300
-        let listSize: CGFloat = CGFloat(viewModel.list.count)
+        let listSize: CGFloat = CGFloat(list.count)
         let spaces: CGFloat = 6 * listSize
         width -= spaces
         let elementSize = (width / listSize)
@@ -114,7 +152,6 @@ struct ChartBarView: View {
     }
 }
 
-
 struct BarsChart: View {
     var value: CGFloat
     var width: CGFloat
@@ -126,7 +163,7 @@ struct BarsChart: View {
         if width > 30 {
             w = 30
         } else if width < 10 {
-             w = 10
+            w = 10
         }
         let multiplier: CGFloat = (self.maxValue / parentHeigth)
         return ZStack(alignment: .bottom) {
