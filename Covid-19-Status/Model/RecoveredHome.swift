@@ -25,7 +25,7 @@ struct RecoveredHome: View {
             Text(String(recovereds)).font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
         
         }).frame(width: 287).padding(EdgeInsets(top: 20, leading: 13, bottom: 60, trailing: 47))
-            .background(Color(red: 0.3412, green: 0.4353, blue: 0.7647, opacity: 1.0))
+            .background(Color(red: 0.4706, green: 0.6275, blue: 0.7059, opacity: 1.0))
             .cornerRadius(10.0).shadow(radius: 10.0)
     
     }
