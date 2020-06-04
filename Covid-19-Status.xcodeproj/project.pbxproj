@@ -14,6 +14,7 @@
 		890EECDE2478DB4B00CC0DBC /* StatusBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890EECDD2478DB4B00CC0DBC /* StatusBarColor.swift */; };
 		890EECE22478FFD700CC0DBC /* tipsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 890EECE12478FFD600CC0DBC /* tipsData.json */; };
 		890EECE42479024C00CC0DBC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890EECE32479024C00CC0DBC /* Data.swift */; };
+		8933C4C0248956810093D729 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C4BF248956810093D729 /* Chart.swift */; };
 		8986B59B2479A7A300DA98FE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986B59A2479A7A300DA98FE /* Color.swift */; };
 		89E4C12D247C55E30036ABDF /* HomeDataOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C12C247C55E30036ABDF /* HomeDataOverView.swift */; };
 		89E4C12F247D96EB0036ABDF /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E4C12E247D96EB0036ABDF /* AppData.swift */; };
@@ -63,6 +64,7 @@
 		890EECDD2478DB4B00CC0DBC /* StatusBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarColor.swift; sourceTree = "<group>"; };
 		890EECE12478FFD600CC0DBC /* tipsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tipsData.json; sourceTree = "<group>"; };
 		890EECE32479024C00CC0DBC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8933C4BF248956810093D729 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		8986B59A2479A7A300DA98FE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		89E4C12C247C55E30036ABDF /* HomeDataOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataOverView.swift; sourceTree = "<group>"; };
 		89E4C12E247D96EB0036ABDF /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		89092F982478575900A58C1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8933C4BF248956810093D729 /* Chart.swift */,
 				89E4C13E2482E37E0036ABDF /* Tips */,
 				89092F9B24785A9200A58C1F /* Home */,
 				890EECD924786CEF00CC0DBC /* MainView.swift */,
@@ -392,6 +395,7 @@
 				890EECDE2478DB4B00CC0DBC /* StatusBarColor.swift in Sources */,
 				89E4C1402482F9CB0036ABDF /* TipsMainView.swift in Sources */,
 				BD3049F22477690400346FE5 /* Covid_19_Status.xcdatamodeld in Sources */,
+				8933C4C0248956810093D729 /* Chart.swift in Sources */,
 				89E4C12D247C55E30036ABDF /* HomeDataOverView.swift in Sources */,
 				89E4C133247EEBED0036ABDF /* DataService.swift in Sources */,
 				890EECDC24787FF000CC0DBC /* TipView.swift in Sources */,
