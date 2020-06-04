@@ -18,6 +18,8 @@ class DataService {
     
     private static let connectionCheck = ConnectionCheck()
     
+    public static let fistDayBrazil = "20200130"
+    
     static var localData: AllInfos {
         get{
             if fileExists(filename: localFileName) {
@@ -75,6 +77,20 @@ class DataService {
             }
             return nil
         }
+    
+    static func getStateByDateRange(state: String, start: String, end: String) -> [BrazilianState] {
+        var list: [BrazilianState] = []
+        let start: Int = Int(start) ?? 0
+        let end: Int = Int(end) ?? 0
+        for i in start...end {
+            let estados:[BrazilianState] = DataService.getAllStatesByDate("\(i)").data
+            let filter: [BrazilianState] = estados.filter {
+                $0.uf == state.uppercased()
+            }
+            list.append(contentsOf: filter)
+        }
+        return list
+    }
     
     private static func request<T:Decodable>(_ teste: String) -> T {
         var res: T!

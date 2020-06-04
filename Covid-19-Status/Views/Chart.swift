@@ -12,9 +12,17 @@ class ChartViewModel: ObservableObject {
     @Published var selected: Int = 0 {didSet {
         list = allListst[selected]
         }}
-    @Published var list: [CGFloat] = [50,100,150,200,50,100,150,200,50,100,150,200,50,100,150,200,200,50,100,150,200,50,100,150,200,200,50,100,150,200,50,100,150,200]
+    @Published var list: [CGFloat] = []
     let allListst: [[CGFloat]] = [[10,20,100,200],[40,30,20,10],[10,20,30,20,10]]
     
+    init() {
+        // Exemplo de pegar um dado especifico.
+        let aux:[BrazilianState] = DataService.getStateByDateRange(state: "SP", start: "20200301", end: "20200316")
+        for data in aux {
+            list.append(CGFloat(data.cases))
+        }
+        list = list.filter {$0 > 0}
+    }
 }
 
 struct ChartBarView: View {
