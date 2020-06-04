@@ -34,7 +34,7 @@ struct HomeView: View {
                             return Text("")
                         }.background(Color.clear)
                         HomeBody(listSize: 4, appData: appData)
-                            .offset(y: -250).zIndex(2)
+                            .offset(y: -200).zIndex(2)
                     }
                 }.background(bgColor)
 //                Text("\(self.offset)").frame(height: 36)

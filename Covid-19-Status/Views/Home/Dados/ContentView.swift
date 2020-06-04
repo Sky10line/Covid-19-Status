@@ -14,7 +14,7 @@ import SwiftUI
 struct ContentView: View {
     @State var isPresented = false
     @State var idState = ""
-    @State private var selectedStateIndex = -1
+    @State private var selectedStateIndex = 0
     @State private var backOpacity = 1.0
     var body: some View {
         
