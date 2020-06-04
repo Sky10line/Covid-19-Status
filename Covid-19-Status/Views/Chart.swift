@@ -67,7 +67,7 @@ struct ChartBarView: View {
                             Spacer()
                             ChartBar(numberList: viewModel.numberList,dateList: viewModel.dateList, maxValue: viewModel.maxValue)
                         }
-                        Text(xTitle).padding()
+                        Text(xTitle).padding(.top, 24)
                     }
                     Picker(selection: $viewModel.selected, label: Text("")) {
                         Text("Semana").tag(0)
