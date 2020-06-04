@@ -14,28 +14,26 @@ struct HomeBody: View {
     var tips = tipsData
     @State var listSize: Int = 0
     var appData: AppData
-    var txtColor = Color.secondary
+    var txtColor = Color(red: 0.1608, green: 0.1647, blue: 0.1843, opacity: 1.0) // color.secondary
     
     var body: some View {
         if listSize == 0 {
             listSize = tips.count
         }
-        return VStack {
+        return VStack(alignment: .center, spacing: 18, content: {
+            
             Text("Dados").font(.system(size: 40, weight: .bold, design: .default))
                 .padding(.top)
                 .foregroundColor(txtColor)
+
             //Botao que muda a selecao da tab bar
             Button(action: {
                 self.appData.tabSelec = 2
             }){
+                
                 CellDataRec()
-                    .padding(.top)
                     .foregroundColor(.black)
-            }
-            Button(action: {
-                self.appData.tabSelec = 2
-            }){
-                CustomButton(txt: "Ver mais dados")
+                
             }
             Text("Dicas").font(.system(size: 40, weight: .bold, design: .default))
                 .padding(.top)
@@ -45,13 +43,13 @@ struct HomeBody: View {
                     HomeTipsRow(tips: self.tips, index: index)
                 }
             }
-            
+
             Button(action: {
                 self.appData.tabSelec = 1
             }){
                 CustomButton(txt: "Ver mais dicas")
             }
-        }
+        })
         .background(BackgroundRect())
     }
     
@@ -152,7 +150,7 @@ struct BackgroundRect: View {
                 path.addLine(to: CGPoint(x: 0, y: tl))
                 path.addArc(center: CGPoint(x: tl, y: tl), radius: tl, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
             }
-            .fill(self.startColor)
+            .fill(Color.white)
         }
     }
 }

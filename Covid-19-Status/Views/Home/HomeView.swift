@@ -34,7 +34,7 @@ struct HomeView: View {
                             return Text("")
                         }.background(Color.clear)
                         HomeBody(listSize: 4, appData: appData)
-                            .offset(y: -60).zIndex(2)
+                            .offset(y: -250).zIndex(2)
                     }
                 }.background(bgColor)
 //                Text("\(self.offset)").frame(height: 36)
@@ -49,7 +49,7 @@ struct HomeView: View {
 struct HomeHeader: View {
     
     var body: some View {
-        Image("covid").resizable()
+        Image("covid2").resizable()
         
         
     }
