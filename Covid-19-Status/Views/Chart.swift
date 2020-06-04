@@ -9,38 +9,42 @@
 import SwiftUI
 
 class ChartViewModel: ObservableObject {
-    @Published var selected: Int = 0 {didSet {
-        list = chageList()
-        maxValue = list.max()!
+    @Published var selected: Int = 0 {didSet {chageList()
         }}
-    @Published var list: [CGFloat]
+    @Published var numberList: [CGFloat]{didSet{maxValue = numberList.max()!}}
     @Published var maxValue: CGFloat
-    let fullList: [CGFloat]
+    @Published var dateList: [String]
+    var fullDateList: [String]
+    var fullNumberList: [CGFloat]
     
-    init(list: [CGFloat]) {
-        self.fullList = list
-        self.list = fullList.suffix(7)
-        self.maxValue = fullList.max()!
+    init(numberList: [CGFloat], dateList: [String]) {
+        self.fullNumberList = numberList
+        self.fullDateList = dateList
+        self.numberList = fullNumberList.suffix(7)
+        self.dateList = fullDateList.suffix(7)
+        self.maxValue = fullNumberList.max()!
     }
     
-    func chageList() -> [CGFloat]{
+    func chageList() {
         if selected == 0 {
-            return fullList.suffix(7)
+            numberList =  fullNumberList.suffix(7)
+            dateList =  fullDateList.suffix(7)
+        }else if selected == 1 {
+            numberList = fullNumberList.suffix(15)
+            dateList =  fullDateList.suffix(15)
+        } else {
+            numberList = fullNumberList
+            dateList =  fullDateList
         }
-        if selected == 1 {
-            return fullList.suffix(15)
-        }
-        return fullList
     }
 }
 
 struct ChartBarView: View {
     
     @ObservedObject var viewModel: ChartViewModel
-    @State var title: String = "Nome do grafico"
-    @State var xTitle: String = "Parametro x"
-    @State var yTitle: String = "Parametro y"
-    var line: Bool = false
+    var title: String = "Nome do grafico"
+    var xTitle: String = "Parametro x"
+    var yTitle: String = "Parametro y"
     
     var body: some View {
         
@@ -61,7 +65,7 @@ struct ChartBarView: View {
                                     .rotationEffect(Angle(degrees: 90))
                             }.frame(width: 0)
                             Spacer()
-                            ChartBar(list: viewModel.list, maxValue: viewModel.maxValue)
+                            ChartBar(numberList: viewModel.numberList,dateList: viewModel.dateList, maxValue: viewModel.maxValue)
                         }
                         Text(xTitle).padding()
                     }
@@ -78,8 +82,8 @@ struct ChartBarView: View {
         
     }
     
-    init(list: [CGFloat]) {
-        viewModel = ChartViewModel(list: list)
+    init(numberList: [CGFloat], dateList: [String]) {
+        viewModel = ChartViewModel(numberList: numberList, dateList: dateList)
     }
     
     
@@ -88,19 +92,20 @@ struct ChartBarView: View {
 
 struct ChartBar:  View {
     
-    let list: [CGFloat]
+    let numberList: [CGFloat]
+    let dateList: [String]
     let maxValue: CGFloat
     
     var body: some View {
         ZStack {
-            if list.count > 20 {
+            if numberList.count > 20 {
                 ScrollView(.horizontal) {
                     HStack(alignment: .bottom, spacing: 6) {
-                        ForEach(0..<list.count, id: \.self) { i in
+                        ForEach(0..<numberList.count, id: \.self) { i in
                             VStack {
-                                BarsChart(value: self.list[i], width: self.getBarWidth(self.list), parentHeigth: 300, maxValue: self.maxValue)
-                                if i % 4 == 0 {
-                                Text("12/04").font(.caption)
+                                BarsChart(value: self.numberList[i], width: self.getBarWidth(self.numberList), parentHeigth: 300, maxValue: self.maxValue)
+                                if i % 5 == 0 {
+                                    Text("\(self.dateList[i])").font(.caption)
                                     .frame(width: 50, height: 30)
                                     .rotationEffect(Angle(degrees: -45))
                                     .padding(.top, 6)
@@ -111,7 +116,7 @@ struct ChartBar:  View {
                                     .padding(.top, 6)
                                         .foregroundColor(.clear)
                                 }
-                            }.frame(width: self.getBarWidth(self.list) + 4)
+                            }.frame(width: self.getBarWidth(self.numberList) + 4)
                             
                         }
                     }
@@ -119,15 +124,15 @@ struct ChartBar:  View {
                     .frame(maxWidth: 320)
             } else {
                 HStack(alignment: .bottom, spacing: 6) {
-                    ForEach(list.indices, id: \.self) { i in
+                    ForEach(numberList.indices, id: \.self) { i in
                         VStack {
-                            BarsChart(value: self.list[i], width: self.getBarWidth(self.list), parentHeigth: 300, maxValue: self.maxValue)
+                            BarsChart(value: self.numberList[i], width: self.getBarWidth(self.numberList), parentHeigth: 300, maxValue: self.maxValue)
                             
-                            Text("12/04").font(.caption)
+                            Text("\(self.dateList[i])").font(.caption)
                                 .frame(width: 50, height: 30)
                                 .rotationEffect(Angle(degrees: -45))
                                 .padding(.top, 6)
-                        }.frame(width: self.getBarWidth(self.list))
+                        }.frame(width: self.getBarWidth(self.numberList))
                     }
                 }
                 .frame(height: 300)
@@ -179,7 +184,8 @@ struct BarsChart: View {
 
 struct ChartBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartBarView(list: [1,2,3,4,5,6,7,14,21,42,82,100,120,160,200,1,2,3,4,5,6,7,14,21,42,82,100,120,160,300])
+        ChartBarView(numberList: [1,2,3,4,5,6,7,14,21,42,82,100,120,160,200,1,2,3,4,5,6,7,14,21,42,82,100,120,160,300,1],
+        dateList: ["01/01","02/01","03/01","04/01","05/01","06/01","07/01","08/01","09/01","10/01","11/01","12/01","13/01","14/01","15/01","16/01","17/01","18/01","19/01","20/01","21/01","22/01","23/01","24/01","25/01","26/01","27/01","28/01","29/01","30/01","31/01"])
     }
 }
 
