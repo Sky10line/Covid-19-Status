@@ -23,18 +23,18 @@ struct HomeView: View {
 //            VStack {
                 ScrollView {
                     VStack {
-                        HomeHeader().frame(height: 270).zIndex(1)
-                        GeometryReader { innerGeo -> Text in
-                            self.offset = innerGeo.frame(in: .global).minY + 60
-                            if self.offset < 120 {
-                                self.statusBarStyle.currentStyle = .darkContent
-                            } else{
-                                self.statusBarStyle.currentStyle = .lightContent
-                            }
-                            return Text("")
-                        }.background(Color.clear)
+                        HomeHeader().frame(height: 250).zIndex(1)
+//                        GeometryReader { innerGeo -> Text in
+//                            self.offset = innerGeo.frame(in: .global).minY + 60
+//                            if self.offset < 120 {
+//                                self.statusBarStyle.currentStyle = .darkContent
+//                            } else{
+//                                self.statusBarStyle.currentStyle = .lightContent
+//                            }
+//                            return Text("")
+//                        }.background(Color.clear)
                         HomeBody(listSize: 4, appData: appData)
-                            .offset(y: -200).zIndex(2)
+                            .offset(y: -100).zIndex(2)
                     }
                 }.background(Color.white)
 //                Text("\(self.offset)").frame(height: 36)
@@ -49,7 +49,7 @@ struct HomeView: View {
 struct HomeHeader: View {
     
     var body: some View {
-        Image("covid2").resizable()
+        Image("covid-logo02").resizable()
         
         
     }
