@@ -21,9 +21,10 @@ struct Cases: View {
                 Text(String(cases) + "\nConfirmados").font(.headline).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
                 
                 Spacer()
-                
+                if (suspects > 0){
                 Text(String(suspects) + "\nSuspeitos").font(.headline).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
                 Spacer()
+                }
                 
             }
             .frame(width: 287.0)

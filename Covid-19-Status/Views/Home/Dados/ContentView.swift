@@ -22,14 +22,14 @@ struct ContentView: View {
         let brazil = DataService.getCountry("brazil")!
         let allStates = DataService.getAllStates().data
         var options = [String]()
-//        options.append("Brasil")
-//        ForEach(0 ..< allStates.count) {
-//            options.append(allStates[$0].state)
-//        }
+        options.append("Brasil")
+        for states: BrazilianState in allStates{
+            options.append(states.state)
+        }
         
         return ZStack {
             NavigationView {
-                VStack {
+                VStack(alignment: .leading) {
                     Button(action: {
                         self.backOpacity = 0.3
                         withAnimation{
@@ -40,11 +40,11 @@ struct ContentView: View {
                             Text("Brasil").font(.title)
                         }
                         else{
-                        Text(allStates[selectedStateIndex].state)
+                        Text(allStates[selectedStateIndex-1].state)
                             .font(.title)
                         }
                         Image(systemName: "chevron.right").offset(y: 2)
-                    }).offset(x:-105, y: -100)
+                    }).offset(x: 10, y: -100)
                     VStack {
                         if(selectedStateIndex == 0){
                         Recovered(recovereds: brazil.data.recovered).offset(y:-80)
@@ -75,8 +75,8 @@ struct ContentView: View {
                         VStack(alignment: .center, spacing: 10, content: {
                             Text("Selecione um estado:").font(.body).foregroundColor(Color.black).offset(x: 5, y: 30)
                             Picker(selection: $selectedStateIndex, label: Text("")) {
-                                ForEach(0 ..< allStates.count) {
-                                    Text(allStates[$0].state)
+                                ForEach(0 ..< options.count) {
+                                    Text(options[$0])
                                 }
                             }
                         }).background(Color.white)
@@ -85,6 +85,7 @@ struct ContentView: View {
                             self.backOpacity = 1.0
                             if(self.selectedStateIndex > 0){
                                 self.idState = allStates[self.selectedStateIndex-1].uf
+                                print("trocou o nome")
                             }
                             print(String(self.selectedStateIndex))
                             withAnimation{

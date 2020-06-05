@@ -33,6 +33,7 @@
 		BD304A072477690A00346FE5 /* Covid_19_StatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A062477690A00346FE5 /* Covid_19_StatusTests.swift */; };
 		BD304A122477690A00346FE5 /* Covid_19_StatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD304A112477690A00346FE5 /* Covid_19_StatusUITests.swift */; };
 		BD7ADB17248979F900465812 /* RecoveredHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7ADB16248979F800465812 /* RecoveredHome.swift */; };
+		BDA83DA7248ABAF400E50709 /* Refuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA83DA6248ABAF400E50709 /* Refuses.swift */; };
 		BDD22DD42486E69A00EC2F27 /* SelectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD22DD32486E69A00EC2F27 /* SelectionData.swift */; };
 		BDD22DD82486F13300EC2F27 /* Recovered.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD22DD72486F13300EC2F27 /* Recovered.swift */; };
 		BDD22DDA2486F23700EC2F27 /* Obitos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD22DD92486F23700EC2F27 /* Obitos.swift */; };
@@ -89,6 +90,7 @@
 		BD304A112477690A00346FE5 /* Covid_19_StatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_19_StatusUITests.swift; sourceTree = "<group>"; };
 		BD304A132477690A00346FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD7ADB16248979F800465812 /* RecoveredHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveredHome.swift; sourceTree = "<group>"; };
+		BDA83DA6248ABAF400E50709 /* Refuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refuses.swift; sourceTree = "<group>"; };
 		BDD22DD32486E69A00EC2F27 /* SelectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionData.swift; sourceTree = "<group>"; };
 		BDD22DD72486F13300EC2F27 /* Recovered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recovered.swift; sourceTree = "<group>"; };
 		BDD22DD92486F23700EC2F27 /* Obitos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obitos.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				BD7ADB16248979F800465812 /* RecoveredHome.swift */,
 				BDD22DD92486F23700EC2F27 /* Obitos.swift */,
 				BDD22DDB2486F25200EC2F27 /* Cases.swift */,
+				BDA83DA6248ABAF400E50709 /* Refuses.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				BDD22DD42486E69A00EC2F27 /* SelectionData.swift in Sources */,
 				89092F9A2478578100A58C1F /* HomeView.swift in Sources */,
 				BDD22DDC2486F25200EC2F27 /* Cases.swift in Sources */,
+				BDA83DA7248ABAF400E50709 /* Refuses.swift in Sources */,
 				89E4C139248052A80036ABDF /* ConnectionCheck.swift in Sources */,
 				BD3049EF2477690400346FE5 /* SceneDelegate.swift in Sources */,
 			);

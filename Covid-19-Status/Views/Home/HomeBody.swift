@@ -78,10 +78,11 @@ struct HomeTipsRow: View {
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
     var cellColor: Color = Color.secondary
     var cellForegroundColor: Color = Color.black
-    
+    let icons = ["tips1", "covid2"]
     var body: some View {
         HStack {
             Spacer()
+            
             CellTips(tip: tips[index], cellcColor: cellColor,foregroundColor: cellForegroundColor)
             Spacer()
             if index + 1 < tips.count {
@@ -100,7 +101,7 @@ struct CellTips: View {
     
     let tip: Tip
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    var cellcColor: Color = Color.secondary
+    var cellcColor: Color = Color(red: 0.6196, green: 0.7569, blue: 0.9059, opacity: 1.0)
     let foregroundColor: Color
     var body: some View {
         NavigationLink(destination: TipView(tip: tip)){
