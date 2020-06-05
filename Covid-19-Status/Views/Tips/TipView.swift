@@ -43,12 +43,13 @@ struct CellTips: View {
                 Text("").frame(width: size.w, height: size.h)
                     .background(cellcColor)
                     .cornerRadius(25)
-                
+                    
                 Text(tip.title).frame(width: 120)
                     .font(.headline)
                     .foregroundColor(foregroundColor)
                     .offset(y: -16)
-            }
+                
+            }.shadow(color: Color.black.opacity(0.3), radius: 10)
         }
     }
 }
