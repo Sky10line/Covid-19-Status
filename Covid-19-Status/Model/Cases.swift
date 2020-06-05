@@ -11,8 +11,10 @@ import SwiftUI
 struct Cases: View {
     var cases: Int
     var suspects: Int
+    var update_at: String
     var body: some View {
-        VStack(alignment: .leading, spacing: 18, content: {
+        let update_atDate = update_at.components(separatedBy: "T")
+        return VStack(alignment: .leading, spacing: 18, content: {
             Text("Casos").font(.title).fontWeight(.heavy).foregroundColor(Color.white).multilineTextAlignment(.leading)
             
             
@@ -26,9 +28,12 @@ struct Cases: View {
                 Spacer()
                 }
                 
-            }
-            .frame(width: 287.0)
-        }).padding(EdgeInsets(top: 20, leading: 30, bottom: 60, trailing: 30))
+            }.frame(width: 287.0)
+            
+            Text("Atualizado em: " + update_atDate[0])
+            .font(.footnote)
+            .foregroundColor(Color.white)
+        }).padding(EdgeInsets(top: 20, leading: 30, bottom: 20, trailing: 30))
             .background(Color(red: 0.4314, green: 0.5804, blue: 0.8510, opacity: 1.0))
             .cornerRadius(10.0).shadow(radius: 10.0)
     }
@@ -37,6 +42,6 @@ struct Cases: View {
 
 struct Cases_Previews: PreviewProvider {
     static var previews: some View {
-        Cases(cases: 10, suspects: 100)
+        Cases(cases: 10, suspects: 100, update_at: "dia 2")
     }
 }

@@ -25,7 +25,7 @@ struct  CellDataRec: View {
     let brazil = DataService.getCountry("brazil")!
     
     var body: some View {
-        RecoveredHome(recovereds: brazil.data.recovered)
+        RecoveredHome(recovereds: brazil.data.recovered, update_at: brazil.data.updated_at)
         
     }
 //        ZStack (alignment: .leading) {
