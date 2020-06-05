@@ -14,28 +14,26 @@ struct HomeBody: View {
     var tips = tipsData
     @State var listSize: Int = 0
     var appData: AppData
-    var txtColor = Color.secondary
+    var txtColor = Color(red: 0.1608, green: 0.1647, blue: 0.1843, opacity: 1.0) // color.secondary
     
     var body: some View {
         if listSize == 0 {
             listSize = tips.count
         }
-        return VStack {
+        return VStack(alignment: .center, spacing: 18, content: {
+            
             Text("Dados").font(.system(size: 40, weight: .bold, design: .default))
                 .padding(.top)
                 .foregroundColor(txtColor)
+
             //Botao que muda a selecao da tab bar
             Button(action: {
                 self.appData.tabSelec = 2
             }){
+                
                 CellDataRec()
-                    .padding(.top)
                     .foregroundColor(.black)
-            }
-            Button(action: {
-                self.appData.tabSelec = 2
-            }){
-                CustomButton(txt: "Ver mais dados")
+                
             }
             Text("Dicas").font(.system(size: 40, weight: .bold, design: .default))
                 .padding(.top)
@@ -45,13 +43,13 @@ struct HomeBody: View {
                     HomeTipsRow(tips: self.tips, index: index)
                 }
             }
-            
+
             Button(action: {
                 self.appData.tabSelec = 1
             }){
                 CustomButton(txt: "Ver mais dicas")
             }
-        }
+        })
         .background(BackgroundRect())
     }
     
@@ -59,16 +57,16 @@ struct HomeBody: View {
 
 struct CustomButton: View {
     
-    var bgColor = Color.featured
+    var bgColor = Color(red: 0.3412, green: 0.4353, blue: 0.7647, opacity: 1.0)
     var txt: String
     var body: some View{
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(bgColor)
                 .frame(width: 320, height: 50)
-            Text(txt).font(.title)
+            Text(txt).font(.title).fontWeight(.bold)
         }
-        .foregroundColor(.black)
+        .foregroundColor(.white)
         .padding()
     }
 }
@@ -80,10 +78,11 @@ struct HomeTipsRow: View {
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
     var cellColor: Color = Color.secondary
     var cellForegroundColor: Color = Color.black
-    
+    let icons = ["tips1", "covid2"]
     var body: some View {
         HStack {
             Spacer()
+            
             CellTips(tip: tips[index], cellcColor: cellColor,foregroundColor: cellForegroundColor)
             Spacer()
             if index + 1 < tips.count {
@@ -102,7 +101,7 @@ struct CellTips: View {
     
     let tip: Tip
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
-    var cellcColor: Color = Color.secondary
+    var cellcColor: Color = Color(red: 0.6196, green: 0.7569, blue: 0.9059, opacity: 1.0)
     let foregroundColor: Color
     var body: some View {
         NavigationLink(destination: TipView(tip: tip)){
@@ -152,7 +151,7 @@ struct BackgroundRect: View {
                 path.addLine(to: CGPoint(x: 0, y: tl))
                 path.addArc(center: CGPoint(x: tl, y: tl), radius: tl, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
             }
-            .fill(self.startColor)
+            .fill(Color.white)
         }
     }
 }

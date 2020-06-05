@@ -66,16 +66,16 @@ class DataService {
     }
     
     static func getState(_ state: String) -> BrazilianState? {
-        if connectionCheck.isConnection  && isUpdated() {
-            updateLocalData()
+//        if connectionCheck.isConnection  && isUpdated() {
+//            updateLocalData()
             return request("\(stateURL)/\(state)")
-        }
-        for stateObj in localData.states {
-            if stateObj.uf == state.uppercased() {
-                    return stateObj
-                }
-            }
-            return nil
+//        }
+//        for stateObj in localData.states {
+//            if stateObj.uf == state.uppercased() {
+//                    return stateObj
+//                }
+//            }
+//            return nil
         }
     
     static func getStateByDateRange(state: String, start: String, end: String) -> [BrazilianState] {

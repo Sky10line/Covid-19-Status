@@ -46,8 +46,8 @@ struct TipsMainView: View {
     @State var searchTerm: String = ""
     
     var tips = tipsData
-    let bgColor = Color.secondary
-    let cellColor = Color.primary
+    let bgColor = Color.white
+    let cellColor = Color.secondary
     
     var body: some View {
         statusBarStyle.currentStyle = .darkContent
@@ -73,17 +73,17 @@ struct TipsMainView: View {
                             Spacer()
                             VStack {
                                 ForEach(model.leftList, id: \.self) { tip in
-                                        CellTips(tip: tip, cellcColor: self.cellColor, foregroundColor: Color.white).padding(.vertical)
+                                        CellTips(tip: tip, cellcColor: self.cellColor, foregroundColor: Color.black).padding(.vertical)
                                 }
                             }
                             Spacer()
                             VStack {
                                 ForEach(model.rightList, id: \.self) { tip in
-                                    CellTips(tip: tip, cellcColor: self.cellColor, foregroundColor: Color.white).padding(.vertical)
+                                    CellTips(tip: tip, cellcColor: self.cellColor, foregroundColor: Color.black).padding(.vertical)
                                 }
                                 if model.rightList.count < model.leftList.count {
                                     Text("").frame(width: 150, height: 200)
-                                    .background(Color.clear)
+                                    .background(bgColor)
                                 }
                             }
                             Spacer()
@@ -92,7 +92,7 @@ struct TipsMainView: View {
                         Button(action: {
                             UIApplication.shared.open(URL(string: "https://coronavirus.saude.gov.br")!)
                         }){
-                            CustomButton(txt: "Informacoes oficiais")
+                            CustomButton(txt: "Informações oficiais")
                         }
                     }
                 }.zIndex(0)
@@ -108,7 +108,7 @@ struct TipsMainView: View {
 struct TipsMainViewHeader: View {
     
     var tips = tipsData
-    let bgColor = Color.secondary
+    let bgColor = Color.white
     
     var body: some View {
         //        ZStack{

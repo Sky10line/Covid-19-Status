@@ -13,7 +13,6 @@ struct MainView: View {
 //    @State private var selection = 0
     @EnvironmentObject var appData: AppData
     
-    var color = Color.primary
     var body: some View {
         TabView(selection: $appData.tabSelec) {
             HomeView(appData: appData)
@@ -28,10 +27,10 @@ struct MainView: View {
                 
             }){
                 ContentView(idState: "sp")
-                }.tabItem{
+                }.tabItem {
                     Text("Dados")
                 }.tag(2)
-        }.background(color)
+        }.background(Color.white)
     }
 }
 
