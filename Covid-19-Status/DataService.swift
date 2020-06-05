@@ -14,8 +14,11 @@ class DataService {
     private static let stateURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf"
     private static let brasilURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
     private static let allContriesURL = "https://covid19-brazil-api.now.sh/api/report/v1/countries"
+    private static let statesByDateURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
     
     private static let connectionCheck = ConnectionCheck()
+    
+    public static let fistDayBrazil = "20200130"
     
     static var localData: AllInfos {
         get{
@@ -58,6 +61,10 @@ class DataService {
         return Brazil(data: localData.states)
     }
     
+    static func getAllStatesByDate(_ date: String) -> Brazil{
+        return request("\(statesByDateURL)/\(date)")
+    }
+    
     static func getState(_ state: String) -> BrazilianState? {
         if connectionCheck.isConnection  && isUpdated() {
             updateLocalData()
@@ -70,6 +77,20 @@ class DataService {
             }
             return nil
         }
+    
+    static func getStateByDateRange(state: String, start: String, end: String) -> [BrazilianState] {
+        var list: [BrazilianState] = []
+        let start: Int = Int(start) ?? 0
+        let end: Int = Int(end) ?? 0
+        for i in start...end {
+            let estados:[BrazilianState] = DataService.getAllStatesByDate("\(i)").data
+            let filter: [BrazilianState] = estados.filter {
+                $0.uf == state.uppercased()
+            }
+            list.append(contentsOf: filter)
+        }
+        return list
+    }
     
     private static func request<T:Decodable>(_ teste: String) -> T {
         var res: T!
