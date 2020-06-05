@@ -31,6 +31,28 @@ struct TipView: View {
     }
 }
 
+struct CellTips: View {
+    
+    let tip: Tip
+    let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
+    var cellcColor: Color = Color(red: 0.6196, green: 0.7569, blue: 0.9059, opacity: 1.0)
+    let foregroundColor: Color
+    var body: some View {
+        NavigationLink(destination: TipView(tip: tip)){
+            ZStack(alignment: .bottom){
+                Text("").frame(width: size.w, height: size.h)
+                    .background(cellcColor)
+                    .cornerRadius(25)
+                
+                Text(tip.title).frame(width: 120)
+                    .font(.headline)
+                    .foregroundColor(foregroundColor)
+                    .offset(y: -16)
+            }
+        }
+    }
+}
+
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
         TipView(tip: tipsData[5])
