@@ -59,7 +59,6 @@ struct ContentView: View {
                             Cases(cases: state.cases, suspects:state.suspects, update_at: state.datetime).offset(y: -60)
                             //
                             Obitos(deaths: state.deaths, update_at: state.datetime).offset(y:-40)
-                            
                         }
                         
                     }.offset(y: 50)

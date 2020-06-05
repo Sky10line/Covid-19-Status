@@ -20,9 +20,12 @@ struct RecoveredHome: View {
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.leading)
             HStack {
-                Text("Casos recuperados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
+                VStack(alignment: .leading){
+                    Text("Casos recuperados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
+                    Text("acumulados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
+                }
                 Spacer()
-                Image(systemName: "chevron.right").font(.title).foregroundColor(Color.white).offset(x: 30,y: 15)
+                Image(systemName: "chevron.right").font(.title).foregroundColor(Color.white).offset(x: 30,y: 10)
             }
             Text(String(recovereds)).font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
         
