@@ -47,22 +47,22 @@ struct ContentView: View {
                     }).offset(x: 10, y: -100)
                     VStack {
                         if(selectedStateIndex == 0){
-                        Recovered(recovereds: brazil.data.recovered).offset(y:-80)
+                        Recovered(recovereds: brazil.data.recovered, update_at: brazil.data.updated_at).offset(y:-80)
                             
-                        Cases(cases: brazil.data.cases, suspects: 0).offset(y: -60)
+                        Cases(cases: brazil.data.cases, suspects: 0, update_at: brazil.data.updated_at).offset(y: -60)
                         //
-                        Obitos(deaths: brazil.data.deaths).offset(y:-40)
+                        Obitos(deaths: brazil.data.deaths, update_at: brazil.data.updated_at).offset(y:-40)
                         }
                         else{
-                            Recovered(recovereds: state.refuses).offset(y:-80)
+                            Refuse(refuses: state.refuses, update_at: state.datetime ).offset(y:-80)
                                 
-                            Cases(cases: state.cases, suspects:state.suspects).offset(y: -60)
+                            Cases(cases: state.cases, suspects:state.suspects, update_at: state.datetime).offset(y: -60)
                             //
-                            Obitos(deaths: state.deaths).offset(y:-40)
+                            Obitos(deaths: state.deaths, update_at: state.datetime).offset(y:-40)
                             
                         }
                         
-                    }.offset(y:-20)
+                    }.offset(y: 50)
                    
                     
                 }.navigationBarTitle("")

@@ -10,13 +10,19 @@ import SwiftUI
 
 struct Obitos: View {
     var deaths: Int
+    var update_at: String
     var body: some View {
-        VStack(alignment: .leading, spacing: 18, content: {
+        let update_atDate = update_at.components(separatedBy: "T")
+        return VStack(alignment: .leading, spacing: 18, content: {
             Text("Óbitos").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
         
             Text(String(deaths)).font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
+            
+            Text("Atualizado em: " + update_atDate[0])
+            .font(.footnote)
+            .foregroundColor(Color.white)
         
-        }).padding(EdgeInsets(top: 20, leading: 30, bottom: 60, trailing: 230))
+        }).frame(width: 287).padding(EdgeInsets(top: 20, leading: -30, bottom: 20, trailing: 90))
             .background(Color(red: 0.6000, green: 0.6745, blue: 0.8549, opacity: 1.0))
             .cornerRadius(10.0).shadow(radius: 10.0)
     }
@@ -24,6 +30,6 @@ struct Obitos: View {
 
 struct Obitos_Previews: PreviewProvider {
     static var previews: some View {
-        Obitos(deaths: 0)
+        Obitos(deaths: 0, update_at: "dia 2")
     }
 }
