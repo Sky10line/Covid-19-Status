@@ -36,7 +36,7 @@ struct HomeView: View {
                         HomeBody(listSize: 4, appData: appData)
                             .offset(y: -200).zIndex(2)
                     }
-                }.background(bgColor)
+                }.background(Color.white)
 //                Text("\(self.offset)").frame(height: 36)
 //            }
         .navigationBarTitle("Home")

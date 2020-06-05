@@ -21,7 +21,11 @@ struct ContentView: View {
         let state = DataService.getState(idState)!
         let brazil = DataService.getCountry("brazil")!
         let allStates = DataService.getAllStates().data
-        
+        var options = [String]()
+//        options.append("Brasil")
+//        ForEach(0 ..< allStates.count) {
+//            options.append(allStates[$0].state)
+//        }
         
         return ZStack {
             NavigationView {
@@ -32,7 +36,7 @@ struct ContentView: View {
                             self.isPresented.toggle()
                         }
                     }, label: {
-                        if(selectedStateIndex == -1){
+                        if selectedStateIndex == 0{
                             Text("Brasil").font(.title)
                         }
                         else{
@@ -42,11 +46,22 @@ struct ContentView: View {
                         Image(systemName: "chevron.right").offset(y: 2)
                     }).offset(x:-105, y: -100)
                     VStack {
-                        Recovered(recovereds: state.refuses).offset(y:-80)
-                        
-                        Cases(cases: state.cases, suspects: state.suspects).offset(y: -60)
+                        if(selectedStateIndex == 0){
+                        Recovered(recovereds: brazil.data.recovered).offset(y:-80)
+                            
+                        Cases(cases: brazil.data.cases, suspects: 0).offset(y: -60)
                         //
-                        Obitos(deaths: state.deaths).offset(y:-40)
+                        Obitos(deaths: brazil.data.deaths).offset(y:-40)
+                        }
+                        else{
+                            Recovered(recovereds: state.refuses).offset(y:-80)
+                                
+                            Cases(cases: state.cases, suspects:state.suspects).offset(y: -60)
+                            //
+                            Obitos(deaths: state.deaths).offset(y:-40)
+                            
+                        }
+                        
                     }.offset(y:-20)
                    
                     
@@ -68,7 +83,10 @@ struct ContentView: View {
                         .cornerRadius(10.0)
                         Button(action: {
                             self.backOpacity = 1.0
-                            self.idState = allStates[self.selectedStateIndex].uf
+                            if(self.selectedStateIndex > 0){
+                                self.idState = allStates[self.selectedStateIndex-1].uf
+                            }
+                            print(String(self.selectedStateIndex))
                             withAnimation{
                                 self.isPresented.toggle()
                             }
@@ -89,8 +107,6 @@ struct ContentView: View {
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

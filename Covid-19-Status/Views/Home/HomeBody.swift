@@ -57,16 +57,16 @@ struct HomeBody: View {
 
 struct CustomButton: View {
     
-    var bgColor = Color.featured
+    var bgColor = Color(red: 0.3412, green: 0.4353, blue: 0.7647, opacity: 1.0)
     var txt: String
     var body: some View{
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(bgColor)
                 .frame(width: 320, height: 50)
-            Text(txt).font(.title)
+            Text(txt).font(.title).fontWeight(.bold)
         }
-        .foregroundColor(.black)
+        .foregroundColor(.white)
         .padding()
     }
 }
