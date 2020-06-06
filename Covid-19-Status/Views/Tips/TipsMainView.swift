@@ -83,7 +83,8 @@ struct TipsMainView: View {
                                 }
                                 if model.rightList.count < model.leftList.count {
                                     Text("").frame(width: 150, height: 200)
-                                    .background(bgColor)
+                                        .background(Color.clear)
+                                        .padding(.vertical)
                                 }
                             }
                             Spacer()
