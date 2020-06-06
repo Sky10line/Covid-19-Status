@@ -70,7 +70,6 @@ class DataService {
 //        DispatchQueue.main.async {
             for i in 0...29 {
                 let endDate = Calendar.current.date(byAdding: .day, value: -i, to: initDate)
-                print(endDate)
                 let states:[BrazilianState] = getAllStatesByDate(dateFormatter.string(from: endDate!)).data
                 let aux: Brazil = Brazil(data: states)
                 brazil.append(aux)

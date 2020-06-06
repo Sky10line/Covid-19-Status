@@ -67,15 +67,16 @@ struct ContentView: View {
                             if(selectedStateIndex == 0){
                                 Recovered(recovereds: brazil.data.recovered, update_at: brazil.data.updated_at).offset(y:-80)
                                 
-                                //                        Cases(cases: brazil.data.cases, suspects: 0, update_at: brazil.data.updated_at).offset(y: -60)
-                                //
+                                                        Cases(cases: brazil.data.cases, suspects: 0, update_at: brazil.data.updated_at).offset(y: -60)
+                                
                                 Obitos(deaths: brazil.data.deaths, update_at: brazil.data.updated_at).offset(y:-40)
+                                
                             }
                             else{
                                 Refuse(refuses: state.refuses, update_at: state.datetime ).offset(y:-80)
                                 
-                                //                            Cases(cases: state.cases, suspects:state.suspects, update_at: state.datetime).offset(y: -60)
-                                //
+                                                            Cases(cases: state.cases, suspects:state.suspects, update_at: state.datetime).offset(y: -60)
+                                
                                 Obitos(deaths: state.deaths, update_at: state.datetime).offset(y:-40)
                                 
                                 ChartBarView(numberList: casesList, dateList: dateList, title: "Casos Confirmados", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
@@ -86,8 +87,6 @@ struct ContentView: View {
                                 
                                 ChartBarView(numberList: deathList, dateList: dateList, title: "Mortes por data", xTitle: "Data", yTitle: "Numero de Mortes").foregroundColor(Color.black)
                                 
-                                //                            ChartBarView(numberList: lastMonth.map{CGFloat($0.cases)}, dateList: lastMonth.map{$0.datetime})
-                                //                            //                        Text("\(DataService.lastMonth[0].data[0].uf)")
                             }
                             
                             //
