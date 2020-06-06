@@ -22,15 +22,11 @@ struct MainView: View {
             TipsMainView().tabItem {
                 Text("Dicas")
             }.tag(1)
-            
-            Button(action: {
-                
-            }){
-                ContentView(idState: "sp")
-                }.tabItem {
-                    Text("Dados")
-                }.tag(2)
-        }.background(Color.white)
+            ContentView(idState: "sp")
+            .tabItem {
+                Text("Dados")
+            }.tag(2)
+        }
     }
 }
 
