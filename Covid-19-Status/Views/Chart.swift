@@ -11,29 +11,32 @@ import SwiftUI
 class ChartViewModel: ObservableObject {
     @Published var selected: Int = 0 {didSet {chageList()
         }}
-    @Published var numberList: [CGFloat]{didSet{maxValue = numberList.max()!}}
+    @Published var numberList: [CGFloat]
     @Published var maxValue: CGFloat
     @Published var dateList: [String]
     var fullDateList: [String]
     var fullNumberList: [CGFloat]
     
     init(numberList: [CGFloat], dateList: [String]) {
-        self.fullNumberList = numberList
-        self.fullDateList = dateList
+        self.fullNumberList = numberList.reversed()
+        self.fullDateList = dateList.reversed()
         self.numberList = fullNumberList.suffix(7)
         self.dateList = fullDateList.suffix(7)
-        self.maxValue = fullNumberList.max()!
+        self.maxValue = numberList.max()!
     }
     
     func chageList() {
         if selected == 0 {
             numberList =  fullNumberList.suffix(7)
+            maxValue = numberList.max()!
             dateList =  fullDateList.suffix(7)
         }else if selected == 1 {
             numberList = fullNumberList.suffix(15)
+            maxValue = numberList.max()!
             dateList =  fullDateList.suffix(15)
         } else {
             numberList = fullNumberList
+            maxValue = numberList.max()!
             dateList =  fullDateList
         }
     }
@@ -49,7 +52,7 @@ struct ChartBarView: View {
     var body: some View {
         
         ZStack {
-            Color(.gray).edgesIgnoringSafeArea(.all)
+//            Color(.gray).edgesIgnoringSafeArea(.all)
             
             VStack {
                 Text(title).font(.title)
@@ -82,8 +85,11 @@ struct ChartBarView: View {
         
     }
     
-    init(numberList: [CGFloat], dateList: [String]) {
+    init(numberList: [CGFloat], dateList: [String], title: String?, xTitle: String?,yTitle: String?) {
         viewModel = ChartViewModel(numberList: numberList, dateList: dateList)
+        self.title = title ?? self.title
+        self.xTitle = xTitle ?? self.xTitle
+        self.yTitle = yTitle ?? self.yTitle
     }
     
     
@@ -123,6 +129,7 @@ struct ChartBar:  View {
                 }.frame(height: 300)
                     .frame(maxWidth: 320)
             } else {
+                
                 HStack(alignment: .bottom, spacing: 6) {
                     ForEach(numberList.indices, id: \.self) { i in
                         VStack {
@@ -173,20 +180,20 @@ struct BarsChart: View {
         let multiplier: CGFloat = (self.maxValue / parentHeigth)
         return ZStack(alignment: .bottom) {
             Rectangle().frame(width: w)
-                .foregroundColor(Color.black)
+                .foregroundColor(Color(red: 0.3412, green: 0.4353, blue: 0.7647, opacity: 1.0))
             
             Rectangle().frame(width: w)
-                .foregroundColor(Color.gray)
+                .foregroundColor(Color.white.opacity(0.5))
                 .padding(.bottom, parentHeigth * ((value / multiplier) / parentHeigth))
         }
     }
 }
 
-struct ChartBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChartBarView(numberList: [1,2,3,4,5,6,7,14,21,42,82,100,120,160,200,1,2,3,4,5,6,7,14,21,42,82,100,120,160,300,1],
-        dateList: ["01/01","02/01","03/01","04/01","05/01","06/01","07/01","08/01","09/01","10/01","11/01","12/01","13/01","14/01","15/01","16/01","17/01","18/01","19/01","20/01","21/01","22/01","23/01","24/01","25/01","26/01","27/01","28/01","29/01","30/01","31/01"])
-    }
-}
+//struct ChartBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ChartBarView(numberList: [1,2,3,4,5,6,7,14,21,42,82,100,120,160,200,1,2,3,4,5,6,7,14,21,42,82,100,120,160,300,1],
+//        dateList: ["01/01","02/01","03/01","04/01","05/01","06/01","07/01","08/01","09/01","10/01","11/01","12/01","13/01","14/01","15/01","16/01","17/01","18/01","19/01","20/01","21/01","22/01","23/01","24/01","25/01","26/01","27/01","28/01","29/01","30/01","31/01"])
+//    }
+//}
 
 

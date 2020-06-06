@@ -15,7 +15,7 @@ class DataService {
     private static let brasilURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
     private static let allContriesURL = "https://covid19-brazil-api.now.sh/api/report/v1/countries"
     private static let statesByDateURL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil"
-    
+     static var lastMonth = DataService.getAllStatesLastMonth()
     private static let connectionCheck = ConnectionCheck()
     
     public static let fistDayBrazil = "20200130"
@@ -61,6 +61,25 @@ class DataService {
         return Brazil(data: localData.states)
     }
     
+    static func getAllStatesLastMonth() -> [Brazil]{
+        var brazil: [Brazil] = []
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let initDate = Date()
+        print(initDate)
+//        DispatchQueue.main.async {
+            for i in 0...29 {
+                let endDate = Calendar.current.date(byAdding: .day, value: -i, to: initDate)
+                print(endDate)
+                let states:[BrazilianState] = getAllStatesByDate(dateFormatter.string(from: endDate!)).data
+                let aux: Brazil = Brazil(data: states)
+                brazil.append(aux)
+            }
+            
+//        }
+        return brazil
+    }
+    
     static func getAllStatesByDate(_ date: String) -> Brazil{
         return request("\(statesByDateURL)/\(date)")
     }
@@ -77,7 +96,16 @@ class DataService {
 //            }
 //            return nil
         }
-    
+    static func getStateLastMonth(_ state: String) -> [BrazilianState] {
+        var list: [BrazilianState] = []
+        for brazil in lastMonth {
+            let filter: [BrazilianState] = brazil.data.filter{
+                $0.uf == state.uppercased()
+            }
+            list.append(contentsOf: filter)
+        }
+         return list
+    }
     static func getStateByDateRange(state: String, start: String, end: String) -> [BrazilianState] {
         var list: [BrazilianState] = []
         let start: Int = Int(start) ?? 0
