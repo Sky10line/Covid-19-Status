@@ -80,13 +80,14 @@ struct ContentView: View {
                                 Obitos(deaths: state.deaths, update_at: state.datetime).offset(y:-40)
                                 
                                 ChartBarView(numberList: casesList, dateList: dateList, title: "Casos Confirmados", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
+                                    .frame(width: 300)
                                 
                                 ChartBarView(numberList: suspectsList, dateList: dateList, title: "Casos Suspeitos por data", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
-                                
+                                .frame(width: 300)
                                 ChartBarView(numberList: refuseList, dateList: dateList, title: "Recusados por data", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
-                                
+                                .frame(width: 300)
                                 ChartBarView(numberList: deathList, dateList: dateList, title: "Mortes por data", xTitle: "Data", yTitle: "Numero de Mortes").foregroundColor(Color.black)
-                                
+                                .frame(width: 300)
                             }
                             
                             //
@@ -95,7 +96,7 @@ struct ContentView: View {
                         
                     }
                     Text("").frame(height: 100)
-                }
+                    }
                 .navigationBarTitle("")
                 .navigationBarHidden(true).opacity(backOpacity)
             }
