@@ -23,7 +23,7 @@ struct HomeView: View {
 //            VStack {
                 ScrollView {
                     VStack {
-                        HomeHeader().frame(height: 250).zIndex(1)
+                        HomeHeader().frame(height: 200).zIndex(1).offset(y: 0)
 //                        GeometryReader { innerGeo -> Text in
 //                            self.offset = innerGeo.frame(in: .global).minY + 60
 //                            if self.offset < 120 {
@@ -34,7 +34,7 @@ struct HomeView: View {
 //                            return Text("")
 //                        }.background(Color.clear)
                         HomeBody(listSize: 4, appData: appData)
-                            .offset(y: -100).zIndex(2)
+                            .offset(y: -50).zIndex(2)
                     }
                 }.background(Color.white)
 //                Text("\(self.offset)").frame(height: 36)
@@ -49,7 +49,7 @@ struct HomeView: View {
 struct HomeHeader: View {
     
     var body: some View {
-        Image("covid-logo02").resizable()
+        Image("covidlogo").resizable()
         
         
     }

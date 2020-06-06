@@ -78,7 +78,7 @@ struct HomeTipsRow: View {
     let size: (w: CGFloat, h:CGFloat) = (w: 150, h: 200)
     var cellColor: Color = Color.secondary
     var cellForegroundColor: Color = Color.black
-    let icons = ["tips1", "covid2"]
+    
     var body: some View {
         HStack {
             Spacer()
