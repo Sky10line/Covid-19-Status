@@ -45,7 +45,7 @@ struct ContentView: View {
         
         return ZStack {
             NavigationView {
-                ScrollView {
+                ScrollView(.vertical, showsIndicators: false) {
                     Text("").frame(height: 100)
                     VStack(alignment: .leading) {
                         Button(action: {
