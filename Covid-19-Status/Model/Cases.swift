@@ -15,7 +15,7 @@ struct Cases: View {
     var body: some View {
         let update_atDate = update_at.components(separatedBy: "T")
         return VStack(alignment: .leading, spacing: 18, content: {
-            Text("Casos").font(.title).fontWeight(.heavy).foregroundColor(Color.white).multilineTextAlignment(.leading)
+            Text("Casos acumulados").font(.title).fontWeight(.heavy).foregroundColor(Color.white).multilineTextAlignment(.leading)
             
             
             HStack{

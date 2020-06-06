@@ -14,7 +14,7 @@ struct Recovered: View {
     var body: some View {
         let update_atDate = update_at.components(separatedBy: "T")
         return VStack(alignment: .leading, spacing: 18, content: {
-            Text("Casos recuperados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
+            Text("Casos recuperados acumulados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
         
             Text(String(recovereds)).font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
             

@@ -14,7 +14,7 @@ struct Obitos: View {
     var body: some View {
         let update_atDate = update_at.components(separatedBy: "T")
         return VStack(alignment: .leading, spacing: 18, content: {
-            Text("Óbitos").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
+            Text("Óbitos acumulados").font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.leading)
         
             Text(String(deaths)).font(.title).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center)
             
@@ -22,7 +22,7 @@ struct Obitos: View {
             .font(.footnote)
             .foregroundColor(Color.white)
         
-        }).frame(width: 287).padding(EdgeInsets(top: 20, leading: -30, bottom: 20, trailing: 90))
+        }).frame(width: 287).padding(EdgeInsets(top: 20, leading: 13, bottom: 20, trailing: 47))
             .background(Color(red: 0.6000, green: 0.6745, blue: 0.8549, opacity: 1.0))
             .cornerRadius(10.0).shadow(radius: 10.0)
     }
