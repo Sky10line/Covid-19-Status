@@ -23,48 +23,80 @@ struct ContentView: View {
         let allStates = DataService.getAllStates().data
         var options = [String]()
         options.append("Brasil")
+        let lastMonth: [BrazilianState] = DataService.getStateLastMonth(idState)
+        let casesList: [CGFloat] = lastMonth.map{
+            CGFloat($0.cases)
+        }
+        let dateList = lastMonth.map{
+            String($0.datetime.prefix(10).suffix(5))
+        }
+        let deathList: [CGFloat] = lastMonth.map{
+            CGFloat($0.deaths)
+        }
+        let suspectsList: [CGFloat] = lastMonth.map{
+            CGFloat($0.suspects)
+        }
+        let refuseList: [CGFloat] = lastMonth.map{
+            CGFloat($0.refuses)
+        }
         for states: BrazilianState in allStates{
             options.append(states.state)
         }
         
         return ZStack {
             NavigationView {
-                VStack(alignment: .leading) {
-                    Button(action: {
-                        self.backOpacity = 0.3
-                        withAnimation{
-                            self.isPresented.toggle()
-                        }
-                    }, label: {
-                        if selectedStateIndex == 0{
-                            Text("Brasil").font(.title)
-                        }
-                        else{
-                        Text(allStates[selectedStateIndex-1].state)
-                            .font(.title)
-                        }
-                        Image(systemName: "chevron.right").offset(y: 2)
-                    }).offset(x: 10, y: -100)
-                    VStack {
-                        if(selectedStateIndex == 0){
-                        Recovered(recovereds: brazil.data.recovered, update_at: brazil.data.updated_at).offset(y:-80)
-                            
-                        Cases(cases: brazil.data.cases, suspects: 0, update_at: brazil.data.updated_at).offset(y: -60)
-                        //
-                        Obitos(deaths: brazil.data.deaths, update_at: brazil.data.updated_at).offset(y:-40)
-                        }
-                        else{
-                            Refuse(refuses: state.refuses, update_at: state.datetime ).offset(y:-80)
+                ScrollView(.vertical, showsIndicators: false) {
+                    Text("").frame(height: 100)
+                    VStack(alignment: .leading) {
+                        Button(action: {
+                            self.backOpacity = 0.3
+                            withAnimation{
+                                self.isPresented.toggle()
+                            }
+                        }, label: {
+                            if selectedStateIndex == 0{
+                                Text("Brasil").font(.title)
+                            }
+                            else{
+                                Text(allStates[selectedStateIndex-1].state)
+                                    .font(.title)
+                            }
+                            Image(systemName: "chevron.right").offset(y: 2)
+                        }).offset(x: 10, y: -100)
+                        VStack {
+                            if(selectedStateIndex == 0){
+                                Recovered(recovereds: brazil.data.recovered, update_at: brazil.data.updated_at).offset(y:-80)
                                 
-                            Cases(cases: state.cases, suspects:state.suspects, update_at: state.datetime).offset(y: -60)
+                                                        Cases(cases: brazil.data.cases, suspects: 0, update_at: brazil.data.updated_at).offset(y: -60)
+                                
+                                Obitos(deaths: brazil.data.deaths, update_at: brazil.data.updated_at).offset(y:-40)
+                                
+                            }
+                            else{
+                                Refuse(refuses: state.refuses, update_at: state.datetime ).offset(y:-80)
+                                
+                                                            Cases(cases: state.cases, suspects:state.suspects, update_at: state.datetime).offset(y: -60)
+                                
+                                Obitos(deaths: state.deaths, update_at: state.datetime).offset(y:-40)
+                                
+                                ChartBarView(numberList: casesList, dateList: dateList, title: "Casos Confirmados", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
+                                
+                                ChartBarView(numberList: suspectsList, dateList: dateList, title: "Casos Suspeitos por data", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
+                                
+                                ChartBarView(numberList: refuseList, dateList: dateList, title: "Recusados por data", xTitle: "Data", yTitle: "Numero de casos").foregroundColor(Color.black)
+                                
+                                ChartBarView(numberList: deathList, dateList: dateList, title: "Mortes por data", xTitle: "Data", yTitle: "Numero de Mortes").foregroundColor(Color.black)
+                                
+                            }
+                            
                             //
-                            Obitos(deaths: state.deaths, update_at: state.datetime).offset(y:-40)
-                        }
+                        }.offset(y: 50)
                         
-                    }.offset(y: 50)
-                   
-                    
-                }.navigationBarTitle("")
+                        
+                    }
+                    Text("").frame(height: 100)
+                }
+                .navigationBarTitle("")
                 .navigationBarHidden(true).opacity(backOpacity)
             }
             ZStack{
@@ -79,7 +111,7 @@ struct ContentView: View {
                                 }
                             }
                         }).background(Color.white)
-                        .cornerRadius(10.0)
+                            .cornerRadius(10.0)
                         Button(action: {
                             self.backOpacity = 1.0
                             if(self.selectedStateIndex > 0){
@@ -95,13 +127,13 @@ struct ContentView: View {
                             Text("Confimar").frame(width: 300.0, height: 10.0).padding()
                                 .background(Color.white).cornerRadius(10.0).foregroundColor(Color.blue).offset(x: 5)
                         }).background(Color.white)
-                        .cornerRadius(10.0)
-                    
+                            .cornerRadius(10.0)
+                        
                     }).frame(width: 287).padding(EdgeInsets(top: 0, leading: 26, bottom: 60, trailing: 34))
                         .shadow(radius: 50.0)
-                        
-                        
-                   Spacer()
+                    
+                    
+                    Spacer()
                 }
             }.offset(x:0, y: isPresented ? 0: UIApplication.shared.keyWindow?.frame.height ?? 0)
         }
